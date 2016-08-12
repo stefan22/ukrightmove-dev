@@ -9,3 +9,6 @@ Real estate site currently hosted @godaddy - under development -site allows you 
 - MySQL -> live site contains different configuration settings to connect to database
 - PHPmyAdmin -> database controller
 - All configurations: database name, phpMyAdmin, tables, usernames,passwords etc -> inside admin folder
+
+
+![current property-detail.php screenshot](/images/ukrmove-screenshot.png?raw=true "current property-detail.php screenshot")
