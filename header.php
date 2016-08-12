@@ -16,21 +16,22 @@ $title = 'ukRightMove.co.uk';
  
 if(strpos( $_SERVER['REQUEST_URI'] , 'index.php' ))
 {
-	$title = 'Home';
+	$title = "London&#039;s properties website for properties for sale and properties, apartments, and rooms for rent";
 }
 if(strpos( $_SERVER['REQUEST_URI'] , 'about.php' ))
 {
-	$title = 'We got Rooms';
+	$title = 'We got Rooms - Flat shares and Rooms for Rent in London';
 }
 
 if(strpos( $_SERVER['REQUEST_URI'] , 'agents.php' ))
 {
-	$title = 'Agents';
+	$title = 'Find estate agents and lettings agents in London';
 }
 
 if(strpos( $_SERVER['REQUEST_URI'] , 'contact.php' ))
 {
-	$title = 'Contact Us';
+	$title = 'Interested in how ukRightMove can support the growth of your business? Have any questions? Contact us using
+                   the links below';
 }
 
 if(strpos( $_SERVER['REQUEST_URI'] , 'buysalerent.php' ))
@@ -43,17 +44,17 @@ if(strpos( $_SERVER['REQUEST_URI'] , 'buysalerent.php' ))
 		
 		if($_GET['sort'] == 'Buy')
 		{
-			$title = 'Buy';
+			$title = 'Properties for Sale in London - Find Flats and houses for Sale in London';
 		}
 		
 		if($_GET['sort'] == 'Rent')
 		{
-			$title = 'Rent';
+			$title = 'Property to Rent inLondon - Flats and Houses for Rent - Rent a property';
 		}
 		
 		if($_GET['sort'] == 'Sale')
 		{
-			$title = 'Sale';
+			$title = 'Properties for Sale in London - Find Flats and houses for Sale in London';
 		}
 		}
 		if(isset($_POST['search']) && ($_POST['search']) == 'search' )
@@ -175,27 +176,33 @@ $(document).ready(function(){
   <div class="navbar-inverse" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"> 
+          <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> </button>
       </div>
       
       <!-- Nav Starts -->
       <div class="navbar-collapse  collapse">
         <ul class="nav navbar-nav navbar-right">
-         
-          <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'index.php' )){echo 'active'; }?> "><a href="index.php"> Home</a></li>
+
+
+           <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'buy.php' )){echo 'active'; }?> "><a href="buy.php">Buy</a></li>
+            <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'rent.php' )){echo 'active'; }?> "><a href="rent.php">Rent</a></li>
+
           <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'about.php' )){echo 'active'; }?> "><a href="about.php">Rooms</a></li>
           <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'agents.php' )){echo 'active'; }?> " ><a href="agents.php">Agents</a></li>
-          
-         
-          
-  		<li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'contact.php' )){echo 'active'; }?> "><a href="contact.php">Contact</a></li>
+  	    <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'contact.php' )){echo 'active'; }?> "><a href="contact.php">Contact us</a></li>
        
-		  
-		  <?php
+		
+
+
+         <?php
 		   if(isset($_SESSION['AGENT']) && ($_SESSION['AGENT'] != ''))
 		  {
 		 ?>
-		  		<li><a href = "javascript:void(0)" onclick = "createlightbox()" ><img id="userprofile" src="images/agents/<?php echo $_SESSION['AGENT']['image']; ?>" height="30" width="30"></a>
+		  		<li><a href = "javascript:void(0)" onclick = "createlightbox()" ><img id="userprofile" 
+                                src="images/agents/<?php echo $_SESSION['AGENT']['image']; ?>" height="30" width="30"></a>
+                
                 <div id="light" class="white_content">
                 
                 <ul >
@@ -252,10 +259,13 @@ else{
   <!-- Header Starts -->
   <div class="header"> <a href="index.php"><img src="images/logo/<?php echo $logo['value']; ?>" alt="Logo Image" height="100" width="300"></a>
     <ul class="pull-right">
-       <!--<li style="color:#646a5b;font-size:20px;padding-bottom:20px; line-height:30px;">Search properties for Sale and to Rent in London:</li>-->	
-      <li><a href="buysalerent.php?sort=Buy">Buy</a></li>
-      <li><a href="buysalerent.php?sort=Sale">Sale</a></li>
-      <li><a href="buysalerent.php?sort=Rent">Rent</a></li>
+       <!--<li style="color:#646a5b;font-size:20px;padding-bottom:20px; line-height:30px;">
+       Search properties for Sale and to Rent in London:</li>-->	
+      
+      <!-- <li><a href="buysalerent.php?sort=Buy">Buy</a></li> -->
+      
+      <li><a href="buysalerent.php?sort=Sale">For sale</a></li>
+      <li><a href="buysalerent.php?sort=Rent">To rent</a></li>
     </ul>
   </div>
   <!-- #Header Starts --> 
