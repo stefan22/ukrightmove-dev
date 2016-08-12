@@ -145,9 +145,10 @@ button.btn.btn-success {
 	padding: 0 0 0 40px;
 }
 .header ul li a {
-	font-size: 19px;
+	font-size: 22px;
 	font-family: din;
-	text-transform: uppercase;
+	font-weight: normal;
+	
 }
 .header ul li a:hover {
 	text-decoration: none;
