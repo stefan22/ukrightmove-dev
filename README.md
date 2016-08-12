@@ -5,7 +5,7 @@ Real estate site currently hosted @godaddy - under development -site allows you 
 - Site developing - running locally and also live at godaddy
 - Local environment -> localhost/~stefano/
 - Apache -> apachectl start
-- MySQL  -> godaddy databse (locally remote connection: host via ip | No MAMP..or WAMP
+- MySQL  -> godaddy databse (site running on local environment connects to remote database: host via ip | No MAMP..or WAMP
 - MySQL -> live site contains different configuration settings to connect to database
 - PHPmyAdmin -> database controller
 - All configurations: database name, phpMyAdmin, tables, usernames,passwords etc -> inside admin folder
