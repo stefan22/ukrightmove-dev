@@ -1,14 +1,12 @@
 # ukrightmove-dev
 
-Real estate site currently hosted @godaddy - under development -site allows you to sign in and out, create new sellers accounts, add new properties, manage  and make changes to your properties providing a username and password, and to upload images -  all data: images, property details, agents information stored into a mysql database hosted at godaddys -  to create a market place for landlords, tenants, agents and home buyers to meet each other.
+A market place/ real estate theme site for landlords, tenants, agents and home buyers to get together in London.
+Live site - under development/hosted @godaddys -it allows you to sign in and out, upload a profile picture, reset/ update your password, create new users/sellers accounts, add new properties, manage and make changes to your properties providing a username and password, and to upload images -  all data: images, property details, agents information stored on a mysql database hosted at the same site's url.
 
-- Site developing - running locally and also live at godaddy
-- Local environment -> localhost/~stefano/
-- Apache -> apachectl start
-- MySQL  -> godaddy databse (site running on local environment connects to remote database: host via ip | No MAMP..or WAMP
-- MySQL -> live site contains different configuration settings to connect to database
-- PHPmyAdmin -> database controller
-- All configurations: database name, phpMyAdmin, tables, usernames,passwords etc -> inside admin folder
+- Site developing - locally and live hosting @godaddys
+- Local environment/apache -> localhost/~stefano/
+  and connects to remote database via ip | No MAMP or WAMP !  Also No Property Table Has Many Agents Table :) ...or should?
+- All configurations: database name, phpMyAdmin, tables, usernames,passwords etc -> under admin folder (.gitignore)
 
 
 ![current property-detail.php screenshot](/images/ukrmove-screenshot.png?raw=true "current property-detail.php screenshot")
