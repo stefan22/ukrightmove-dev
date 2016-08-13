@@ -185,10 +185,10 @@ $(document).ready(function(){
       <div class="navbar-collapse  collapse">
         <ul class="nav navbar-nav navbar-right">
 
-
-           <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'buy.php' )){echo 'active'; }?> "><a href="buy.php">Buy</a></li>
-            <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'rent.php' )){echo 'active'; }?> "><a href="rent.php">Rent</a></li>
-
+          <li class="home"><a href="index.php">ukRightMove.co.uk</a>
+            <span class="desc"> Properties, flats and rooms for sale, and to rent</span></li>
+          <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'buy.php' )){echo 'active'; }?> "><a href="buy.php">Buy</a></li>
+          <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'rent.php' )){echo 'active'; }?> "><a href="rent.php">Rent</a></li>
           <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'about.php' )){echo 'active'; }?> "><a href="about.php">Rooms</a></li>
           <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'agents.php' )){echo 'active'; }?> " ><a href="agents.php">Agents</a></li>
   	    <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'contact.php' )){echo 'active'; }?> "><a href="contact.php">Contact us</a></li>
