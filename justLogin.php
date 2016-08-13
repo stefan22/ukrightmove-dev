@@ -1,79 +1,50 @@
 <?php 
-
 include'header.php';
-error_reporting(0);
-$Get_slider= get_image_slider();
-$Get_slider['img'];
-$str = explode(',',$Get_slider['img']);
-	$i = 1;
-		
-				
+error_reporting(0);                             //checklogin.php brought me here	
 ?>
 
-<div class="">
-<div id="slider" class="sl-slider-wrapper">
-  <div class="sl-slider">
-    <?php 
-	
-		foreach($str as $test)
-		{
-			$slider = get_property_selected($test);
-			if($i % 2 == 0  )
-			{
-			?>
-    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25"
-     data-slice1-scale="2" data-slice2-scale="2">
-      <?php
-			}
-			else
-			{
-			?>
-      <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" 
-      data-slice1-scale="1.5" data-slice2-scale="1.5">
-        <?php	
-			}
-			?>
-        <div class="sl-slide-inner">
-          <div class="bg-img" style="background-image:url(images/properties/<?php echo $slider['pimage']; ?>);" ></div>
-          <h2><a href="property-detail.php?pid=<?php echo $slider['pid'];  ?>"><?php echo $slider['ptitle'];  ?></a></h2>
-          <blockquote>
-            <p class="location"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $slider['paddress'];  ?></p>
-            <p><?php echo substr ($slider['pdetail'],0,200);  ?></p>
-            <cite><?php echo currency.' '.$slider['pprice'];  ?></cite> </blockquote>
-        </div>
-      </div>
-      <?php
-			 $i++;
-		}
-		?>
-    </div>
-    <!-- /sl-slider -->
-    
-    <nav id="nav-dots" class="nav-dots">
-      <?php
-        $i=0;
-        foreach($str as $test)
-        {
-			if($i  == 0 )
-			{
-			?>
-      <span class="nav-dot-current"></span>
-      <?php
-    		}
-			else
-			{
-			?>
-      <span></span>
-      <?php
-        		
-			}
-			$i++;
-        }
-		?>
-    </nav>
-  </div>
-  <!-- /slider-wrapper --> 
+
+ <div class="container">
+                  <div class="row">
+                        <div class="col-lg-8  col-lg-offset-2 col-sm-12">
+
+                              <h3>Thanks for creating an account. Use it to add new properties, upload images, get in touch
+                                      with potential clients and more.</h3>
+
+                                       <div class="col-lg-2 col-sm-2 ">
+                                              <img src="images/agents/<?php echo $data['image']; ?>" class="img-responsive"  alt="agent name">
+                                            </div>
+
+                                            <div class="col-lg-7 col-sm-7 ">
+                                              <h4><?php echo $data['name']; ?></h4>
+                                              <p><?php echo stripslashes($data['description']); ?></p>
+                                            </div>
+
+                                            <div class="col-lg-3 col-sm-3 "><span class="glyphicon glyphicon-envelope"></span>
+                                               <a href="mailto:<?php echo $data['email']; ?>"><?php echo $data['email']; ?></a><br>
+                                              <span class="glyphicon glyphicon-earphone"></span> 
+                                            
+                                            <?php echo $data['phone']; ?>
+
+                                          </div>
+
+
+                        </div> <!--  end of div    -->   
+                  </div>    <!--  end of row    -->    
+</div>   <!--  end of container    -->
+
+
+
+<!--  this stuff remains here   --->
+
+<!-- banner -->
+<div class="inside-banner">
+  <div class="container"> 
+    <span class="pull-right"><a href="index.php">Home</a> / Agents</span>
+    <h2>Agents</h2>
 </div>
+</div>
+<!-- banner -->   
 <div class="banner-search">
   <div class="container"> 
     <!-- banner -->
@@ -134,8 +105,6 @@ $str = explode(',',$Get_slider['img']);
 <!-- banner -->
 <div class="container">
 <div class="properties-listing spacer"> <a href="buysalerent.php?task=all" class="pull-right viewall">View All Listing</a>
-
-
   <h2>Featured Properties</h2>
   <div id="owl-example" class="owl-carousel">
     <?php $sel = get_property();
