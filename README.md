@@ -5,7 +5,7 @@ Live site - under development/hosted @godaddys -it allows you to sign in and out
 
 - Site developing - locally and live hosting @godaddys
 - Local environment/apache -> localhost/~stefano/
-  and connects to remote database via ip | No MAMP or WAMP !  Also No Property Table Has Many Agents Table :) ...or should?
+  and connects to remote database via IP | No MAMP or WAMP !  
 - All configurations: database name, phpMyAdmin, tables, usernames,passwords etc -> under admin folder (.gitignore)
 
 
