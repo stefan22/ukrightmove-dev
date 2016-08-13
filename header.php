@@ -23,6 +23,16 @@ if(strpos( $_SERVER['REQUEST_URI'] , 'about.php' ))
 	$title = 'We got Rooms - Flat shares and Rooms for Rent in London';
 }
 
+
+if(strpos( $_SERVER['REQUEST_URI'] , 'justLogin.php' ))
+{
+  $title = 'Find properties for sale and properties, flat shares, houses, apartments and rooms for rent in London';
+}
+
+
+
+
+
 if(strpos( $_SERVER['REQUEST_URI'] , 'agents.php' ))
 {
 	$title = 'Find estate agents and lettings agents in London';
@@ -106,6 +116,8 @@ if(strpos( $_SERVER['REQUEST_URI'] , 'register.php' ))
 }
 	
  ?>
+
+
 <title><?php echo $title; ?> </title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -197,35 +209,46 @@ $(document).ready(function(){
 
 
          <?php
-		   if(isset($_SESSION['AGENT']) && ($_SESSION['AGENT'] != ''))
-		  {
-		 ?>
-		  		<li><a href = "javascript:void(0)" onclick = "createlightbox()" ><img id="userprofile" 
+
+
+		   if(isset($_SESSION['AGENT']) && ($_SESSION['AGENT'] != ''))    {
+
+
+         ?>
+
+		  <li><a href = "javascript:void(0)" onclick = "createlightbox()" ><img id="userprofile" 
                                 src="images/agents/<?php echo $_SESSION['AGENT']['image']; ?>" height="30" width="30"></a>
                 
-                <div id="light" class="white_content">
+                        <div id="light" class="white_content">
                 
-                <ul >
-                <li><a href="edit_profile.php">Edit Profile</a></li>
-                <li><a href="addproperty.php">Add Property</a></li>
-                <li><a href="viewproperty.php">View Properties</a></li>
-                <li><a href="cpass.php">Change Password</a></li>
-                <li><a href="logout.php">Logout</a></li>
-                
-                </ul>
-                
-                </div>
-                </li>
- <?php		
+                              <ul >
+                                      <li><a href="edit_profile.php">Edit Profile</a></li>
+                                      <li><a href="addproperty.php">Add Property</a></li>
+                                      <li><a href="viewproperty.php">View Properties</a></li>
+                                      <li><a href="cpass.php">Change Password</a></li>
+                                      <li><a href="logout.php">Logout</a></li>
+                              </ul>
+                        </div>
+              </li>
+      
+      <?php		
 		  
 		  
 		  
-		  }
-else{
+	   }
+
+
+else   {
+
 	?>
-        <li class=""><a href=""  data-toggle="modal" data-target="#loginpop">Login</a></li>
-    	<!--<li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'register.php' )){echo 'active'; }?> "><a href="register.php">Join now</a></li>-->
+              <li class=""><a href=""  data-toggle="modal" data-target="#loginpop">Login</a></li>
+
     <?php
+
+
+                 
+                 
+           
 }
 		  
   ?>
@@ -251,22 +274,48 @@ else{
 					}?>
            
 <!-- #Header Starts -->
+<?php
 
-<div class="container"> 
-  <?php
-  $logo = get_logo();
-  ?>
-  <!-- Header Starts -->
-  <div class="header"> <a href="index.php"><img src="images/logo/<?php echo $logo['value']; ?>" alt="Logo Image" height="100" width="300"></a>
-    <ul class="pull-right">
-       <!--<li style="color:#646a5b;font-size:20px;padding-bottom:20px; line-height:30px;">
-       Search properties for Sale and to Rent in London:</li>-->	
-      
-      <!-- <li><a href="buysalerent.php?sort=Buy">Buy</a></li> -->
-      
-      <li><a href="buysalerent.php?sort=Sale">For sale</a></li>
-      <li><a href="buysalerent.php?sort=Rent">To rent</a></li>
-    </ul>
-  </div>
-  <!-- #Header Starts --> 
-</div>
+     if (strpos( $_SERVER['REQUEST_URI'] , 'justLogin.php' ))  {
+
+?>
+           <!-- justLogin.php  --->
+
+
+ <?php            
+
+} else {
+
+?>
+
+                 <div class="container"> 
+                        <?php
+                              $logo = get_logo();
+                        ?>
+                              <!-- Header Starts -->
+                              <div class="header"> 
+                                    <a href="index.php">
+                                          <img src="images/logo/<?php echo $logo['value']; ?>" alt="Logo Image" height="100" width="300">
+                                    </a>
+
+                                          <ul class="pull-right">
+                                             <!--<li style="color:#646a5b;font-size:20px;padding-bottom:20px; line-height:30px;">
+                                             Search properties for Sale and to Rent in London:</li>-->  
+                                            
+                                            <!-- <li><a href="buysalerent.php?sort=Buy">Buy</a></li> -->
+                                            
+                                            <li><a href="buysalerent.php?sort=Sale">For sale</a></li>
+                                            <li><a href="buysalerent.php?sort=Rent">To rent</a></li>
+                                          </ul>
+
+                              </div> <!---  end of header div  -->
+                  </div>    <!---  end of container div  -->
+
+<?php
+}
+
+?>
+
+
+
+         
