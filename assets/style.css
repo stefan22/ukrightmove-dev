@@ -543,3 +543,36 @@ h2 {
 	padding: 20px;
 	color: #FFF;
 }
+
+
+
+.container {
+	position: relative;
+}
+
+/* new ukrightmove tab to the left of main nav*/
+
+li.home {
+	position: absolute;
+	top: 8px;
+	left: 10px;
+}
+
+.navbar-inverse .navbar-nav > li.home > a {
+	display: inline;
+	color: #ffffff;
+	font-size: 18px;
+	text-transform: none;
+}
+
+span.desc {
+	color:#898989;
+}
+
+/* removes home main nav tab description when screen size under 1100px;*/
+
+@media (max-width: 1100px) {
+	span.desc {
+		display: none;
+	}
+}
