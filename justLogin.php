@@ -1,36 +1,66 @@
 <?php 
-include'header.php';
-error_reporting(0);                             //checklogin.php brought me here	
+include'header.php';          //checklogin.php brought me here	
+
+$data  =  gat_agent_detail();
+    //print_r($data);
+
 ?>
+
+
 
 
  <div class="container">
                   <div class="row">
-                        <div class="col-lg-8  col-lg-offset-2 col-sm-12">
+                        <div class="col-lg-12 col-sm-12">
+                              <div id="userdash">
+                                      <h3>Thanks for creating an account <?php  echo $data['name']; ?>. <br />
+                                        <span class="smallertxt">Use it to add new properties, upload images, get in touch
+                                         with potential clients and more.</span>
+                                      </h3>  
+                                      
+                               </div>       
+                        </div> <!--  end of thanks   -->
+                   </div> <!-- end of row  ----> 
 
-                              <h3>Thanks for creating an account. Use it to add new properties, upload images, get in touch
-                                      with potential clients and more.</h3>
+                   <div class="row">
+                        <div class="col-lg-12 col-sm-12" id="dashboard">
+                              <div class="col-lg-4 col-sm-8">
+                                    <h2>Dashboard</h2>
+                              </div>
+                              <div class="col-lg-7 col-lg-offset-1 col-sm-8">
+                                      <div class="pull-right midgap">
+                                             <ul id="usernav">
+                                                  <li> <a href="edit_profile.php" type="button" class="btn btn-default">Edit Profile</a><li>
+                                                  <li><a href="addproperty.php" type="button" class="btn btn-default">Add Properties</a><li>
+                                                  <li><a href="viewproperty.php" type="button" class="btn btn-default">View Properties</a></li>
+                                                  <li><a href="cpass.php" type="button" class="btn btn-default">Change Password</a></li>
+                                                  <li><a href="logout.php" type="button" class="btn btn-default">Logout</a></li>
+                                              </ul>
+                                      </div>
+                              </div>
 
-                                       <div class="col-lg-2 col-sm-2 ">
-                                              <img src="images/agents/<?php echo $data['image']; ?>" class="img-responsive"  alt="agent name">
-                                            </div>
+                        </div> <!--  end of dashboard  -->
+                   </div> <!-- end of row  ----> 
+                   
+                   <div class="row">    
+                        <div class="col-lg-4 col-sm-4 biggap" id="miniprofile">
 
-                                            <div class="col-lg-7 col-sm-7 ">
-                                              <h4><?php echo $data['name']; ?></h4>
-                                              <p><?php echo stripslashes($data['description']); ?></p>
-                                            </div>
-
-                                            <div class="col-lg-3 col-sm-3 "><span class="glyphicon glyphicon-envelope"></span>
-                                               <a href="mailto:<?php echo $data['email']; ?>"><?php echo $data['email']; ?></a><br>
-                                              <span class="glyphicon glyphicon-earphone"></span> 
-                                            
-                                            <?php echo $data['phone']; ?>
-
-                                          </div>
-
+                              <ul id="apic">
+                                    <li><img src="images/agents/<?php echo $data['image']; ?>" class="img-responsive"  alt="agent name"></li>
+                                    <li><h4><?php echo $data['name']; ?></h4></li>
+                                    <li ><?php echo stripslashes($data['description']); ?></li>
+                                    <li class="intouch">Get in touch:</li>
+                                    <li>Email: <a href="mailto:<?php echo $data['email']; ?>"><?php echo $data['email']; ?></a></li>
+                                    <li>Mobile: <?php echo $data['phone']; ?></li>
+                              </ul>      
 
                         </div> <!--  end of div    -->   
-                  </div>    <!--  end of row    -->    
+
+                        <div class="col-lg-7 col-lg-offset-1 col-sm-7" id="userMaindash">
+                            <h3>Main content</h3>
+                        </div>
+                  </div>    <!--  end of row    --> 
+
 </div>   <!--  end of container    -->
 
 
