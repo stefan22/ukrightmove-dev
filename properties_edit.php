@@ -13,8 +13,10 @@ if(isset($_POST['pid']) && isset($_POST['pid']) !=  '')
 	editproperty();	
 	$_SESSION['msg1'] = "Edit Properties Successfully";
  	
-	header('Location:properties_edit.php?properties_id='.$_POST['pid']);
-	exit;	
+	//header('Location:properties_edit.php?properties_id='.$_POST['pid']);
+      header( "Location:viewproperty.php");  
+      exit;
+	
 }
 
 if(isset($_GET['dpid']))

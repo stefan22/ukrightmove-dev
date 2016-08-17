@@ -199,6 +199,20 @@ $(document).ready(function(){
 
           <li class="home"><a href="index.php">ukRightMove.co.uk</a>
             <span class="desc"> Properties, flats and rooms for sale, and to rent</span></li>
+
+             <?php
+             
+                        if(isset($_SESSION['AGENT']) && ($_SESSION['AGENT'] != ''))    {
+            ?>
+
+                        <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'justLogin.php' )){echo 'active'; }?> ">
+                          <a href="justLogin.php">Members</a></li>
+
+            <?php
+                        }
+
+            ?>
+                        
           <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'buy.php' )){echo 'active'; }?> "><a href="buy.php">Buy</a></li>
           <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'rent.php' )){echo 'active'; }?> "><a href="rent.php">Rent</a></li>
           <li class="<?php if(strpos( $_SERVER['REQUEST_URI'] , 'about.php' )){echo 'active'; }?> "><a href="about.php">Rooms</a></li>
@@ -214,6 +228,7 @@ $(document).ready(function(){
 		   if(isset($_SESSION['AGENT']) && ($_SESSION['AGENT'] != ''))    {
 
 
+
          ?>
 
 		  <li><a href = "javascript:void(0)" onclick = "createlightbox()" ><img id="userprofile" 
@@ -222,6 +237,7 @@ $(document).ready(function(){
                         <div id="light" class="white_content">
                 
                               <ul >
+                                      <li><a href="justLogin.php">Members</li>
                                       <li><a href="edit_profile.php">Edit Profile</a></li>
                                       <li><a href="addproperty.php">Add Property</a></li>
                                       <li><a href="viewproperty.php">View Properties</a></li>
