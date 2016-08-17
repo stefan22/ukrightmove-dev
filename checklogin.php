@@ -7,7 +7,8 @@ $password= mysql_real_escape_string($_POST['pass']);
  
 $authUser = User($username,$password);
  
-header( "Location:justLogin.php");	
+header( "Location:justLogin.php");
+exit;	
 
 
 ?> 

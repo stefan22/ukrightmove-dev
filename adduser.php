@@ -19,6 +19,8 @@
 if(isset($_POST['task']) && ($_POST['task']) == 'edit_profile' )
 {
 	editagent();
+	header( "Location:justLogin.php");	
+	exit;
 		
 }
 
@@ -29,6 +31,9 @@ elseif(isset($_POST['task']) && ($_POST['task']) == 'chaneg_password')
 else
 {
 	adduser();
+	header( "Location:justLogin.php");	
+	exit;
+
 }
 ?>
 
