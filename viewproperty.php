@@ -54,63 +54,79 @@ $sel = mysql_query($sql1)or die(mysql_error());
 </div>
 <!-- banner -->
 
-
+<!-- view properties/ properties listings -->
 <div class="container">
-<div class="spacer agents">
+     <div class="spacer agents">
+	<div class="row">
+   		<div class="col-lg-12  col-sm-12">
+ 			<div class="row">
 
-<div class="row">
-  <div class="col-lg-12  col-sm-12">
- <div class="row">
-	<?php while($data = mysql_fetch_assoc($sel))
-	{
-		?>
-     <div class="col-lg-4 col-sm-6" id="agent_property">
-            <div class="properties">
-                  <div class="image-holder"><img src="images/properties/<?php echo $data['pimage']; ?>" class="img-responsive" alt="properties">
-                <div class="status sold"><?php echo $data['ptype']; ?></div>
-              </div>
-                  <h4><a href="property-detail.php?pid=<?php echo $data['pid']; ?>"><?php echo $data['ptitle']; ?></a></h4>
-                  <p class="price">Price:<?php echo currency; ?><?php echo $data['pprice']; ?></p>
-                
-               <a class="btn btn-primary" href="properties_edit.php?properties_id=<?php echo $data['pid']; ?>">edit</a>
-       		  <label class="space"></label>    
-             <a class="btn btn-primary" href="viewproperty.php?properties_id=<?php echo $data['pid']; ?>">Delete</a>
-              <label class="space"></label>
-                 </div>
-      					
-          </div>   
-      <?php
-	}
-	
-
-	?>
-    </div>
-    	<?php
-        if( $left_rec > $rec_limit &&   $page != 0   )
+			<?php while($data = mysql_fetch_assoc($sel))
+			
 			{
 			
-			   $last = $page - 2;
-			   echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$last\">Previous</a> ";
-			   echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$page\">Next</a>";
-			}
-			if( $page == 0 )
-			{ //if($left_rec <= 0)
-			  //{ 
-			   echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$page\">Next</a>";
-			  //}
-			}
-			if($left_rec <= $rec_limit && $page != 0) 
-			{
-			   $last = $page - 2;
-			   echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$last\">Previous</a>";
-			}
+			?>
+
+     			<div class="col-lg-4 col-sm-6" id="agent_property">
+            			<div class="properties">
+                  				<div class="image-holder">
+                  					<img src="images/properties/<?php echo $data['pimage']; ?>" 
+                  					 class="img-responsive" alt="properties">
+                				             <div class="status sold"><?php echo $data['ptype']; ?></div>
+              				</div><!---  end of image-holder  -->
+
+                  				<h4><a href="property-detail.php?pid=<?php echo $data['pid']; ?>">
+                  					<?php echo $data['ptitle']; ?></a>
+                  				</h4>
+                  				<p class="price">Price:<?php echo currency; ?><?php echo $data['pprice']; ?></p>
+                                                            <a class="btn btn-primary" href="properties_edit.php?properties_id=
+                                                            <?php echo $data['pid']; ?>">edit</a>
+       		  			<label class="space"></label>    
+             				<a class="btn btn-primary" href="viewproperty.php?properties_id=
+             				<?php echo $data['pid']; ?>">Delete</a>
+              				<label class="space"></label>
+                			 </div><!--  end of properties div -->
+                		</div>   <!--  end of agent_property div -->
+      
+			<?php
+				}
+				
+
+			?>
+    			</div> <!--  end of div row -->
+
+
+
+		    	<?php
+		        		if ( $left_rec > $rec_limit &&   $page != 0   )
+					{
+				
+				   	$last = $page - 2;
+				   	echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$last\">Previous</a> ";
+				   	echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$page\">Next</a>";
+				}
+				
+				if ( $page == 0 )
+				{ //if($left_rec <= 0)
+				  //{ 
+				   	echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$page\">Next</a>";
+				  //}
+				}
+
+				if ($left_rec <= $rec_limit && $page != 0) 
+				{
+				   	$last = $page - 2;
+				   	echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$last\">Previous</a>";
+				}
+
 			?>  
      
-  </div>
-</div>
+  
+  		</div> <!--  end div col12 -->
+	</div> <!--  end of row div-->
+     </div> <!--  end of spacer agent div-->
+</div> <!--  end of container div -->
+<!--  end of view properties/ properties listings -->
 
-
-</div>
-</div>
 
 <?php include'footer.php';?>
