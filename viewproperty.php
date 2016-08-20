@@ -59,7 +59,7 @@ $sel = mysql_query($sql1)or die(mysql_error());
 <div class="spacer agents">
 
 <div class="row">
-  <div class="col-lg-8  col-lg-offset-2 col-sm-12">
+  <div class="col-lg-12  col-sm-12">
  <div class="row">
 	<?php while($data = mysql_fetch_assoc($sel))
 	{
