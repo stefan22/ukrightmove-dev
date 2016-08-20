@@ -190,6 +190,38 @@ button.btn.btn-success {
 .properties-listing div.properties .image-holder {
 	position: relative;
 }
+
+
+/* view properties */
+
+@media (min-width: 1200px) {
+
+	.image-holder img {
+		height: 175px;
+            }
+
+
+	
+
+}
+
+@media (max-width: 1200px) {
+
+	.image-holder {
+		height: 240px;
+            }
+
+	
+
+}
+
+
+
+
+
+
+
+
 .properties-listing div.properties .status {
 	position: absolute;
 	bottom: 0;
