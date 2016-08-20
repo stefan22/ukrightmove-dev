@@ -191,13 +191,35 @@ button.btn.btn-success {
 	position: relative;
 }
 
+.image-holder {
+	border: 1px solid rgb(105, 127, 74);
+    	font-size: 15px;
+    	line-height: 27px;
+            font-style: italic;
 
-/* view properties */
+}
+
+.image-holder img {
+	height: 150px;
+}
+
+.text-holder h4 {
+	font-size: 20px;
+    	line-height: 25px;
+    	overflow: hidden;
+    	height: 50px;
+}
+
+
+
+
+
+/* view properties   this is not doing anything atm */
 
 @media (min-width: 1200px) {
 
 	.image-holder img {
-		height: 175px;
+		height: 150px;
             }
 
 
@@ -205,15 +227,6 @@ button.btn.btn-success {
 
 }
 
-@media (max-width: 1200px) {
-
-	.image-holder {
-		height: 240px;
-            }
-
-	
-
-}
 
 
 
@@ -260,7 +273,7 @@ button.btn.btn-success {
 	background: #72b70f;
 }
 .status.sold {
-	background: rgba(104,167,13,0.8);
+	background: rgba(205, 255, 133, 0.5);
 }
 .status.new {
 	background: rgba(190,7,46,0.8);
@@ -658,11 +671,11 @@ ul#apic {
 
 
 #apic img {
-	max-width: 345px;
+	
     	border: 1px solid #cccccc;
     	border-radius: 5px;
     	box-shadow: 0px 1px 5px #222222;
-    	min-width: 345px;
+    	
 }
 }
 
