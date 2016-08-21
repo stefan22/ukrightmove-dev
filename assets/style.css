@@ -821,3 +821,10 @@ ul#usernav {
 #comehere {
 	padding-top: 1em;
 }
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+   
+}
