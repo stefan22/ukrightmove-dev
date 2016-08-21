@@ -83,7 +83,6 @@ $sel = mysql_query($sql1)or die(mysql_error());
                                              <ul id="usernav">
                                                   <li> <a href="edit_profile.php" type="button" class="btn btn-default">Edit Profile</a><li>
                                                   <li><a href="addproperty.php" type="button" class="btn btn-default">Add Properties</a><li>
-                                                  <li><a href="viewproperty.php" type="button" class="btn btn-default">View Properties</a></li>
                                                   <li><a href="cpass.php" type="button" class="btn btn-default">Change Password</a></li>
                                                   <li><a href="logout.php" type="button" class="btn btn-default">Logout</a></li>
                                               </ul>
@@ -270,37 +269,50 @@ $sel = mysql_query($sql1)or die(mysql_error());
 
 
 
-<!--  this stuff remains here   --->
+<!--  Search Area Section   -->
+<?php 
+
+//get data to get name
+$data  =  gat_agent_detail();
+
+    //print_r($data);
+
+?>
+
 
 <!-- banner -->
 <div class="inside-banner">
   <div class="container"> 
-    <span class="pull-right"><a href="index.php">Home</a> / Agents</span>
-    <h2>Agents</h2>
+    <span class="pull-right"><img alt="some img goes here" src="#" />  <!--  im going to add an image here later--></span>
+    <h2><?php echo $data['name']; ?></h2>
 </div>
 </div>
 <!-- banner -->   
 <div class="banner-search">
   <div class="container"> 
     <!-- banner -->
-    <h3>Buy, Sale & Rent</h3>
+    <h3>Search our Large Selection of Homes for Sale, Properties to Rent, Student Accomodations and Rooms</h3>
     <div class="searchbar">
       <div class="row">
         <div class="col-lg-6 col-sm-6">
           <form action="buysalerent.php" method="post" >
-            <input name="key" type="text" class="form-control" placeholder="Search of Properties">
+            <input name="key" type="text" class="form-control" placeholder="e.g. 'Cannary Wharf', 'NW3', 'E12', 'Waterloo station'">
             <div class="row">
               <div class="col-lg-3 col-sm-3 ">
                 <select class="form-control" name="for">
-                  <option value="">For</option>
-                  <option value="Buy">Buy</option>
-                  <option value="Rent">Rent</option>
-                  <option value="Sale">Sale</option>
+                
+                  <option value="Buy">For Sale</option>
+                  <option value="Rent">To Rent</option>
+                 
                 </select>
               </div>
               <div class="col-lg-3 col-sm-4">
                 <select class="form-control" name="price">
                   <option value="">Price</option>
+                  <option value="60000 AND 80000"><?php echo currency; ?>60,000 - <?php echo currency; ?>80,000</option>
+                  <option value="80000 AND 100000"><?php echo currency; ?>80,000 - <?php echo currency; ?>100,000</option>
+                  <option value="100000 AND 120000"><?php echo currency; ?>100,000 - <?php echo currency; ?>120,000</option>
+                  <option value="120000 AND 150000"><?php echo currency; ?>120,000 - <?php echo currency; ?>150,000</option>
                   <option value="150000 AND 200000"><?php echo currency; ?>150,000 - <?php echo currency; ?>200,000</option>
                   <option value="200000 AND 250000"><?php echo currency; ?>200,000 - <?php echo currency; ?>250,000</option>
                   <option value="250000 AND 300000"><?php echo currency; ?>250,000 - <?php echo currency; ?>300,000</option>
@@ -310,9 +322,10 @@ $sel = mysql_query($sql1)or die(mysql_error());
               <div class="col-lg-3 col-sm-4">
                 <select class="form-control" name="type">
                   <option value="">Property Type</option>
-                  <option value="Apartment">Apartment</option>
-                  <option value="Building">Building</option>
-                  <option value="Office Space">Office Space</option>
+                  <option value="Houses">Houses</option>
+                  <option value="Apartment">Flats/ Apartments</option>
+                  <option value="Rooms">Rooms</option>
+              
                 </select>
               </div>
               <input type="hidden" name="search" value="search">
