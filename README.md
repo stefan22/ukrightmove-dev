@@ -11,4 +11,4 @@ Live site - under development/hosted @godaddys -it allows you to sign in and out
 
 ![current property-detail.php screenshot](/images/ukrmove-screenshot.png?raw=true "current property-detail.php screenshot")
 
-![members page screenshot](/images/screenshots/newmembers-page.png?raw=true "members page screenshot")
+![members page screenshot](/images/screenshots/newmemberspage.png?raw=true "members page screenshot")
