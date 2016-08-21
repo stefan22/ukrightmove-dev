@@ -31,7 +31,7 @@ $id = $_SESSION['AGENT']['id'];
 $sql =mysql_query("select * from property_detail where aid = $id ");
   
   $rec_count = mysql_num_rows($sql);
-  $rec_limit = 3;
+  $rec_limit = 6;
   
   
   if( isset($_GET{'page'} ) )

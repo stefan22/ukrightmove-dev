@@ -319,11 +319,12 @@ button.btn.btn-success {
 	width: 100%;
 	border-radius: 5px;
 }
-/*inside*/
+
+
 .inside-banner {
 	background: url(../images/bginside.jpg) #222;
 	color: #fff;
-	padding: 30px 0;
+	padding: 30px 0 15px;
 }
 .inside-banner h2 {
 	margin: 0;
