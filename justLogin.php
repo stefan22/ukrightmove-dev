@@ -99,7 +99,7 @@ $sel = mysql_query($sql1)or die(mysql_error());
                               <ul id="apic">
                                     <li><img src="images/agents/<?php echo $data['image']; ?>" class="img-responsive"  alt="agent name"></li>
                                     <li id="membername"><h4><?php echo $data['name']; ?></h4></li>
-                                    <li ><?php echo stripslashes($data['description']); ?></li>
+                                    <li id="memberdesc"><?php echo stripslashes($data['description']); ?></li>
                                     <li class="intouch"><h5>Get in touch:</h5></li>
                                     <li>Email: <a href="mailto:<?php echo $data['email']; ?>"><?php echo $data['email']; ?></a></li>
                                     <li>Mobile: <?php echo $data['phone']; ?></li>
