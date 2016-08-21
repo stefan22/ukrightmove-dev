@@ -31,7 +31,7 @@ $id = $_SESSION['AGENT']['id'];
 $sql =mysql_query("select * from property_detail where aid = $id ");
   
   $rec_count = mysql_num_rows($sql);
-  $rec_limit = 6;
+  $rec_limit = 3;
   
   
   if( isset($_GET{'page'} ) )
@@ -138,10 +138,10 @@ $sel = mysql_query($sql1)or die(mysql_error());
                                                                 <p class="price">Price:<?php echo currency; ?><?php echo $data['pprice']; ?></p>
                                                       </div>
                                                       <div class="buttons-holder">
-                                                                <a class="btn btn-primary" href="properties_edit.php?properties_id=
+                                                                <a class="btn btn-primary member" href="properties_edit.php?properties_id=
                                                                 <?php echo $data['pid']; ?>">edit</a>
                                                                 <label class="space"></label>    
-                                                                <a class="btn btn-primary" href="viewproperty.php?properties_id=
+                                                                <a class="btn btn-primary member" href="viewproperty.php?properties_id=
                                                                 <?php echo $data['pid']; ?>">Delete</a>
                                                                 <label class="space"></label>
                                                       </div>  
@@ -155,113 +155,113 @@ $sel = mysql_query($sql1)or die(mysql_error());
 
                                   ?>
                                       </div> <!--  end of div row -->
-                                      <br class="clearfix" />
 
+                                      <div class="row">
+                                           <div class="col-lg-10 col-lg-offset-1 col-sm-10 col-sm-offset-1 pagebox">
+                                                <div class="allpages">
+                                                     <span class="haveqs">Have questions? Get answers to the most frequently asked questions
+                                                            below!
+                                                    </span>   
+                                                    <?php
+                                                          if ( $left_rec > $rec_limit &&   $page != 0   )
+                                                    {
+                                                  
+                                                      $last = $page - 2;
+                                                      echo "<a class=\"pagination_button\" href=\"justLogin.php?page=$last\">Previous</a> ";
+                                                      echo "<a class=\"pagination_button\" href=\"justLogin.php?page=$page\">Next</a>";
+                                                  }
+                                                  
+                                                  if ( $page == 0 )
+                                                  { //if($left_rec <= 0)
+                                                    //{ 
+                                                      echo "<a class=\"pagination_button\" href=\"justLogin.php?page=$page\">Next</a>";
+                                                    //}
+                                                  }
 
+                                                  if ($left_rec <= $rec_limit && $page != 0) 
+                                                  {
+                                                      $last = $page - 2;
+                                                      echo "<a class=\"pagination_button\" href=\"justLogin.php?page=$last\">Previous</a>";
+                                                  }
 
-                                      <?php
-                                            if ( $left_rec > $rec_limit &&   $page != 0   )
-                                      {
-                                    
-                                        $last = $page - 2;
-                                        echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$last\">Previous</a> ";
-                                        echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$page\">Next</a>";
-                                    }
-                                    
-                                    if ( $page == 0 )
-                                    { //if($left_rec <= 0)
-                                      //{ 
-                                        echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$page\">Next</a>";
-                                      //}
-                                    }
+                                                  ?>  
+                                                </div> <!--  end of div allpages -->
+                                               <!--  end of view properties/ properties listings -->
+                                           </div>  <!--  end of div col-lg-12 -->
+                                      </div>  <!--  end of row for next/previous button -->
+                                     
 
-                                    if ($left_rec <= $rec_limit && $page != 0) 
-                                    {
-                                        $last = $page - 2;
-                                        echo "<a class=\"pagination_button\" href=\"viewproperty.php?page=$last\">Previous</a>";
-                                    }
+                                       <div class="row">
+                                           <div class="col-lg-12 col-sm-12">
+                                                    <h3>Getting Started | Choosing your location</h3>
 
-                                  ?>  
+                                                <h5>Start your property search with ukRightmove</h5>
+
+                                                <p>In order to get started using Rightmove for your property search, you will have to specify which 
+                                                location you are interested in. There are four different kinds of searches you can perform using 
+                                                ukRightMove:</p>
+                                                <ul>
+                                                <li>Locations or areas such as Cities, Towns, Counties, Villages, for example: Bristol, Great Yarmouth, 
+                                                Cornwall.</li>
+                                                <li>Postcode Outcode, for example: E11, SS7, G1.</li>
+                                                <li>Full Postcodes, for example: E11 4QY, L18 4PY.</li>
+                                                <li>Train or Tube stations, for example: Waterloo Station, Birmingham New Street Station, Angel Tube.</li>
+                                              </ul>
+
+                                                <h5>Searching by Location or Area</h5>
+
+                                                <p>In order to search for properties in a particular location from the Rightmove homepage:</p>
+                        
+                                                <ol>
+
+                                                    <li>Enter the name of the place you are interested in into the search box.</li>
                                  
+                                                    <li>Press the relevant button for properties to buy or properties for rent.</li>
+                                       
+                                                    <li>If the entered location matches more than one location you will have to choose the select the one 
+                                                      you are interested in.</li>
+                                    
+                                                    <li>Enter the rest of your property criteria as explained in more detail here.</li>
+                                                    
+                                                 </ol>   
+
+                                                    <p>It is better to enter only the name of the place you are interested in and leave out any names of counties
+                                                    or places that place is within. For example, enter "colchester" not "colchester essex". This will give our 
+                                                    search engine the best chance of matching your search.</p>
+
+
+                                                <h5>How do I contact an agent?</h5>      
+
+
+                                                <p>When you have spotted a property that you want to find out more about, you can phone or email the agent:</p>
+                                                
+
+                                                <ol>Email an agent or developer:
+                                               
+                                                      <li>Click 'Request details' button or 'Contact agent' link</li>
+                                                      <li>Enter in your details (you can sign in if you want us to pre-populate your saved details)</li>
+                                                      <li>Click 'Send message'
+                                                      <li>All done - your email is sent instantly and the agent or developer should contact you as soon 
+                                                        as possible</li>
+                                               </ol>
+
+
+
+                                                <ol>Phone an agent or developer:
+                                                        <li>Agent's or developer's contact details are available to the left of the property details and on 
+                                                          the summary listing</li>
+                                              </ol>
+
+                                                <p>Please note that all queries regarding a property on Rightmove, should be directed to the agent marketing 
+                                                the property and not Rightmove.</p>
+                                           </div>  <!--  end of div col-lg-12 for info text stuff -->
+                                       </div>    <!--  end of div row for info text stuff -->
                               
                                   </div> <!--  end div col12 -->
                               </div> <!--  end of row div-->
-                              
-                          
-
-                            <!--  end of view properties/ properties listings -->
 
 
-
-
-                            <h3>Getting Started | Choosing your location</h3>
-
-                            <h5>Start your property search with ukRightmove</h5>
-
-                            <p>In order to get started using Rightmove for your property search, you will have to specify which 
-                            location you are interested in. There are four different kinds of searches you can perform using 
-                            ukRightMove:</p>
-                            <ul>
-                            <li>Locations or areas such as Cities, Towns, Counties, Villages, for example: Bristol, Great Yarmouth, 
-                            Cornwall.</li>
-                            <li>Postcode Outcode, for example: E11, SS7, G1.</li>
-                            <li>Full Postcodes, for example: E11 4QY, L18 4PY.</li>
-                            <li>Train or Tube stations, for example: Waterloo Station, Birmingham New Street Station, Angel Tube.</li>
-                          </ul>
-
-                            <h5>Searching by Location or Area</h5>
-
-                            <p>In order to search for properties in a particular location from the Rightmove homepage:</p>
-    
-                            <ol>
-
-                                <li>Enter the name of the place you are interested in into the search box.</li>
-             
-                                <li>Press the relevant button for properties to buy or properties for rent.</li>
-                   
-                                <li>If the entered location matches more than one location you will have to choose the select the one 
-                                  you are interested in.</li>
-                
-                                <li>Enter the rest of your property criteria as explained in more detail here.</li>
-                                
-                             </ol>   
-
-                                <p>It is better to enter only the name of the place you are interested in and leave out any names of counties
-                                or places that place is within. For example, enter "colchester" not "colchester essex". This will give our 
-                                search engine the best chance of matching your search.</p>
-
-
-                            <h5>How do I contact an agent?</h5>      
-
-
-                            <p>When you have spotted a property that you want to find out more about, you can phone or email the agent:</p>
-                            
-
-                            <ol>Email an agent or developer:
-                           
-                                  <li>Click 'Request details' button or 'Contact agent' link</li>
-                                  <li>Enter in your details (you can sign in if you want us to pre-populate your saved details)</li>
-                                  <li>Click 'Send message'
-                                  <li>All done - your email is sent instantly and the agent or developer should contact you as soon 
-                                    as possible</li>
-                           </ol>
-
-
-
-                            <ol>Phone an agent or developer:
-                                    <li>Agent's or developer's contact details are available to the left of the property details and on 
-                                      the summary listing</li>
-                          </ol>
-
-                            <p>Please note that all queries regarding a property on Rightmove, should be directed to the agent marketing 
-                            the property and not Rightmove.</p>
-
-
-
-
-
-
-                        </div>
+                        </div>  <!--  end of div col-lg-8 -->
                   </div>    <!--  end of row    --> 
 
 </div>   <!--  end of container    -->

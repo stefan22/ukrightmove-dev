@@ -558,13 +558,33 @@ h2 {
 	margin-bottom: 20px;
 }
 #agent_property .properties p {
-	margin-bottom: 10px;
-	font-size: 14px;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	padding: 5px 0;
-	font-family: din;
+	
+    	font-size: 14px;
+    	border-top: 1px solid #ddd;
+    	border-bottom: 1px solid #ddd;
+    	padding: 5px 0;
+    	font-family: din;
+    	line-height: 24px;
 }
+
+.price-holder {
+	
+	margin-bottom: 20px;
+    	height: 34px;
+}
+
+.member {
+	width: 40% !important;
+	border-radius: 10px;
+	border: 1px solid #558a09;
+	box-shadow: 0px 1px 1px #294429;
+	color: #f5f5f5;
+	text-shadow: 1px 0px 1px rgba(0,0,0,.3);
+	font-size: 14px;
+
+}
+
+
 .space {
 	padding-bottom: 5px
 }
@@ -572,21 +592,60 @@ h2 {
 	background: #64a30a;
 	border: none;
 	width: 100%;
-	text-decoration: none;
+         text-decoration: none;
 	border-radius: 20px;
 	text-align: center;
-	padding: 20px;
+	padding: 12px 22px;
 	color: #FFF;
+	border-radius: 10px;
+	border: 1px solid #558a09;
+	box-shadow: 0px 1px 1px #294429;
+	color: #f5f5f5;
+	text-shadow: 1px 0px 1px rgba(0,0,0,.3);
+	font-size: 14px;
+
 }
 .pagination_button:hover {
-	background: #3276b1;
 	border: none;
-	text-decoration: none;
 	width: 100%;
+         text-decoration: none;
 	border-radius: 20px;
 	text-align: center;
-	padding: 20px;
+	padding: 12px 22px;
 	color: #FFF;
+	border-radius: 10px;
+	border: 1px solid #558a09;
+	box-shadow: 0px 1px 1px #294429;
+	color: #f5f5f5;
+	text-shadow: 1px 0px 1px rgba(0,0,0,.3);
+	font-size: 14px;
+}
+
+.pagebox {
+	border-top: 1px solid #d6d6d6;
+    	background: #dfecce;
+    	border-bottom: 1px solid #d6d6d6;
+    	padding: 5px 25px;
+    	margin-bottom: 3em;
+}
+
+
+.allpages {
+	line-height: 60px;
+	float: right;
+}
+
+.haveqs {
+	float: left;
+    	margin-right: 40px;
+    	line-height: 60px;
+}
+
+@media (max-width: 991px) {
+	.haveqs {
+		line-height: 25px;
+	}
+
 }
 
 
