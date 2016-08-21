@@ -17,6 +17,23 @@
  <?php
 		$data  =	gat_agent_detail();
 		//print_r($data);
+
+                        $memberDesc = $data["description"];
+
+                        //converts br tags to new lines
+                        function br2nl($string) {
+                            
+                            return preg_replace('/\<br(\s*)?\/?\>/i', "\n", $string);
+                        }
+
+                        //echo br2nl($memberDesc);
+
+
+
+
+
+
+
 ?>  
 
                <p style="color:#990000; font-size:14px;" align="center">
@@ -56,10 +73,10 @@
                 <label>Email</label>
                 <input type="text" class="form-control" placeholder="Enter Email" readonly name="email" value="<?php echo $data['email']; ?>" >
 				<label>Address</label>
-                <textarea rows="6" class="form-control" placeholder="Address" name="add"><?php echo $data['address'] ; ?></textarea>
+                <textarea rows="3" class="form-control" placeholder="Address" name="add"><?php echo $data['address'] ; ?></textarea>
       			<label>Description</label>
-                <textarea rows="6" class="form-control" placeholder="description" name="description"><?php echo stripslashes($data['description']) ; ?></textarea>
-       
+                <textarea rows="4" class="form-control" placeholder="description" name="description"><?php echo stripslashes(br2nl($memberDesc)) ; ?></textarea>
+                                                                                                                                                        
                 
                 <label>Image</label>
                    <input type="hidden" name="id" value="<?php echo $data['id']; ?>">

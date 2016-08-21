@@ -53,6 +53,7 @@ $sel = mysql_query($sql1)or die(mysql_error());
 </div>
 </div>
 <!-- banner -->
+				
 
 <!-- view properties/ properties listings -->
 <div class="container">
