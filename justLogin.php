@@ -83,7 +83,6 @@ $sel = mysql_query($sql1)or die(mysql_error());
                                              <ul id="usernav">
                                                   <li> <a href="edit_profile.php" type="button" class="btn btn-default">Edit Profile</a><li>
                                                   <li><a href="addproperty.php" type="button" class="btn btn-default">Add Properties</a><li>
-                                                  <li><a href="viewproperty.php" type="button" class="btn btn-default">View Properties</a></li>
                                                   <li><a href="cpass.php" type="button" class="btn btn-default">Change Password</a></li>
                                                   <li><a href="logout.php" type="button" class="btn btn-default">Logout</a></li>
                                               </ul>
