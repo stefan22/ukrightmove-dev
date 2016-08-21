@@ -18,7 +18,15 @@
 		$data  =	gat_agent_detail();
 		//print_r($data);
 
-                        
+                        $memberDesc = $data["description"];
+
+                        //converts br tags to new lines
+                        function br2nl($string) {
+                            
+                            return preg_replace('/\<br(\s*)?\/?\>/i', "\n", $string);
+                        }
+
+                        //echo br2nl($memberDesc);
 
 
 
