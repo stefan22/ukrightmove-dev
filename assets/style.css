@@ -649,6 +649,33 @@ h2 {
 }
 
 
+.membershelp {
+	
+
+}
+
+.membershelp h3 {
+	text-align: center !important;
+}
+
+.membershelp h5 {
+	background: #dfecce;
+    	padding: 7px;
+}
+
+.membershelp p {
+	margin: .5em .5em 1em;
+}
+
+.membershelp ul, .membershelp ol {
+	margin-bottom: 1em;
+}
+
+span.helpback {
+	margin-left:-12px;
+}
+
+
 
 .container {
 	position: relative;
@@ -689,7 +716,7 @@ span.desc {
 }
 
 .midgap {
-	margin-bottom: 3em;
+	margin-bottom: 1em;
 }
 
 
@@ -706,16 +733,31 @@ span.desc {
 	font-size: 16px;
 }
 
+
 #miniprofile {
 	border: 1px solid #d4d4d4;
     	background-color: #f9f9f9;
     	padding: .5em;
     	border-radius: 5px;
+    	padding-top: 1.2em;
 
 }
 
+#membername {
+	background: #dfecce;
+    	padding: 10px;
+    	border-top: 2px solid #767373;
+    	box-shadow: 0px 1px 1px rgba(0,0,0,.4);
+    	border-bottom-left-radius: 5px;
+    	border-bottom-right-radius: 5px;
+    
+}
+
 #miniprofile h4 {
-	margin-top: 20px;
+	font-size: 20px;
+    	line-height: 22px;
+    	color: #292f21;
+    	text-shadow: 1px 1px 7px rgba(165, 183, 141,.3);
 }
 
 ul#apic {
@@ -724,8 +766,16 @@ ul#apic {
 }
 
 #apic li.intouch {
-	text-decoration: underline;
 	padding: 7px 0 3px;
+    	margin: .5em 0 .2em;
+}
+
+#apic li.intouch h5 {
+	margin: 0 0 5px 0;
+    	font-size: 17px;
+    	background: #dfecce;
+    	padding: 7px;
+    	text-decoration: none;
 }
 
 
@@ -757,4 +807,8 @@ ul#usernav {
 
 #userMaindash h3 {
 	text-align: left;
+}
+
+#comehere {
+	padding-top: 1em;
 }

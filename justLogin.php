@@ -59,13 +59,14 @@ $sel = mysql_query($sql1)or die(mysql_error());
 
 
 
- <div class="container">
+ <div class="container" id="top">
                   <div class="row">
                         <div class="col-lg-12 col-sm-12">
                               <div id="userdash">
-                                      <h3>Thanks for creating an account <?php  echo $data['name']; ?>. <br />
+                                      <h3>Welcome to your ukRightMove Inbox <?php  echo $data['name']; ?>. <br />
                                         <span class="smallertxt">Use it to add new properties, upload images, get in touch
-                                         with potential clients and more.</span>
+                                         with potential clients and more.</span> <a class="smallertxt" href="#comehere">Below are a few tips
+                                         to help you get started.</a>
                                       </h3>  
                                       
                                </div>       
@@ -74,10 +75,10 @@ $sel = mysql_query($sql1)or die(mysql_error());
 
                    <div class="row">
                         <div class="col-lg-12 col-sm-12" id="dashboard">
-                              <div class="col-lg-4 col-sm-8">
+                              <div class="col-lg-4 col-sm-5">
                                     <h2>Dashboard</h2>
                               </div>
-                              <div class="col-lg-7 col-lg-offset-1 col-sm-8">
+                              <div class="col-lg-7 col-lg-offset-1 col-sm-7">
                                       <div class="pull-right midgap">
                                              <ul id="usernav">
                                                   <li> <a href="edit_profile.php" type="button" class="btn btn-default">Edit Profile</a><li>
@@ -97,7 +98,7 @@ $sel = mysql_query($sql1)or die(mysql_error());
 
                               <ul id="apic">
                                     <li><img src="images/agents/<?php echo $data['image']; ?>" class="img-responsive"  alt="agent name"></li>
-                                    <li><h4><?php echo $data['name']; ?></h4></li>
+                                    <li id="membername"><h4><?php echo $data['name']; ?></h4></li>
                                     <li ><?php echo stripslashes($data['description']); ?></li>
                                     <li class="intouch"><h5>Get in touch:</h5></li>
                                     <li>Email: <a href="mailto:<?php echo $data['email']; ?>"><?php echo $data['email']; ?></a></li>
@@ -192,8 +193,8 @@ $sel = mysql_query($sql1)or die(mysql_error());
                                      
 
                                        <div class="row">
-                                           <div class="col-lg-12 col-sm-12">
-                                                    <h3>Getting Started | Choosing your location</h3>
+                                           <div class="col-lg-12 col-sm-12 membershelp">
+                                                    <h3 id="comehere">Getting Started | Choosing your location</h3>
 
                                                 <h5>Start your property search with ukRightmove</h5>
 
@@ -236,7 +237,7 @@ $sel = mysql_query($sql1)or die(mysql_error());
                                                 <p>When you have spotted a property that you want to find out more about, you can phone or email the agent:</p>
                                                 
 
-                                                <ol>Email an agent or developer:
+                                                <ol><span class="helpback">Email an agent:</span>
                                                
                                                       <li>Click 'Request details' button or 'Contact agent' link</li>
                                                       <li>Enter in your details (you can sign in if you want us to pre-populate your saved details)</li>
@@ -247,13 +248,14 @@ $sel = mysql_query($sql1)or die(mysql_error());
 
 
 
-                                                <ol>Phone an agent or developer:
+                                                <ol><span class="helpback">Phone an agent:</span>
                                                         <li>Agent's or developer's contact details are available to the left of the property details and on 
                                                           the summary listing</li>
                                               </ol>
 
-                                                <p>Please note that all queries regarding a property on Rightmove, should be directed to the agent marketing 
-                                                the property and not Rightmove.</p>
+                                                <p>Please note that all queries regarding a property on ukRightmove, should be directed to the agent marketing 
+                                                the property and not ukRightmove.</p>
+                                                <a class="smallertxt pull-right" href="#top">Top</a>
                                            </div>  <!--  end of div col-lg-12 for info text stuff -->
                                        </div>    <!--  end of div row for info text stuff -->
                               
