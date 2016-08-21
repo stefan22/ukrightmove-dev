@@ -19,6 +19,7 @@
 		//print_r($data);
 
                         $memberDesc = $data["description"];
+                        $memberAddr = $data['address'];
 
                         //converts br tags to new lines
                         function br2nl($string) {
@@ -27,9 +28,7 @@
                         }
 
                         //echo br2nl($memberDesc);
-
-
-
+                        //echo br2nl($memberAddr);
 
 
 
@@ -73,7 +72,7 @@
                 <label>Email</label>
                 <input type="text" class="form-control" placeholder="Enter Email" readonly name="email" value="<?php echo $data['email']; ?>" >
 				<label>Address</label>
-                <textarea rows="3" class="form-control" placeholder="Address" name="add"><?php echo $data['address'] ; ?></textarea>
+                <textarea rows="3" class="form-control" placeholder="Address" name="add"><?php echo br2nl($memberAddr); ?></textarea>
       			<label>Description</label>
                 <textarea rows="4" class="form-control" placeholder="description" name="description"><?php echo stripslashes(br2nl($memberDesc)) ; ?></textarea>
                                                                                                                                                         
