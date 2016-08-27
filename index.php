@@ -80,6 +80,7 @@ $str = explode(',',$Get_slider['img']);
     <h3>Buy, Sale & Rent</h3>
     <div class="searchbar">
       <div class="row">
+<<<<<<< HEAD
         <?php
             $homepage = "index.php";
             $currentpageurl = $_SERVER['REQUEST_URI'];
@@ -170,6 +171,45 @@ $str = explode(',',$Get_slider['img']);
             <?php
             }
             ?>                
+=======
+            <div class="col-lg-6 col-sm-6">
+                  <form action="buysalerent.php" method="post" >
+                                <input name="key" type="text" class="form-control" placeholder="Search of Properties">
+                                <div class="row">
+                                  <div class="col-lg-3 col-sm-3 ">
+                                    <select class="form-control" name="for">
+                                      <option value="">For</option>
+                                      <option value="Buy">Buy</option>
+                                      <option value="Rent">Rent</option>
+                                      <option value="Sale">Sale</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-lg-3 col-sm-4">
+                                    <select class="form-control" name="price">
+                                      <option value="">Price</option>
+                                      <option value="150000 AND 200000"><?php echo currency; ?>150,000 - <?php echo currency; ?>200,000</option>
+                                      <option value="200000 AND 250000"><?php echo currency; ?>200,000 - <?php echo currency; ?>250,000</option>
+                                      <option value="250000 AND 300000"><?php echo currency; ?>250,000 - <?php echo currency; ?>300,000</option>
+                                      <option value="300000"><?php echo currency; ?>300,000 - above</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-lg-3 col-sm-4">
+                                    <select class="form-control" name="type">
+                                      <option value="">Property Type</option>
+                                      <option value="Apartment">Apartment</option>
+                                      <option value="Building">Building</option>
+                                      <option value="Office Space">Office Space</option>
+                                    </select>
+                                  </div>
+                                  <input type="hidden" name="search" value="search">
+                                  <div class="col-lg-3 col-sm-4">
+                                    <button class="btn btn-success"  onclick="window.location.href='buysalerent.php'">Find Now</button>
+                                  </div>
+                                </div>
+                  </form>
+            </div> <!--  end of div col-lg-6 -->   
+              
+>>>>>>> 2780e25c8fd62aa76d7a898bab337e6805f456d0
 
         <div class="col-lg-5 col-lg-offset-1 col-sm-6 ">
           <?php
