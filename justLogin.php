@@ -31,7 +31,7 @@ $id = $_SESSION['AGENT']['id'];
 $sql =mysql_query("select * from property_detail where aid = $id ");
   
   $rec_count = mysql_num_rows($sql);
-  $rec_limit = 3;
+  $rec_limit = 6;
   
   
   if( isset($_GET{'page'} ) )
@@ -83,7 +83,6 @@ $sel = mysql_query($sql1)or die(mysql_error());
                                              <ul id="usernav">
                                                   <li> <a href="edit_profile.php" type="button" class="btn btn-default">Edit Profile</a><li>
                                                   <li><a href="addproperty.php" type="button" class="btn btn-default">Add Properties</a><li>
-                                                  <li><a href="viewproperty.php" type="button" class="btn btn-default">View Properties</a></li>
                                                   <li><a href="cpass.php" type="button" class="btn btn-default">Change Password</a></li>
                                                   <li><a href="logout.php" type="button" class="btn btn-default">Logout</a></li>
                                               </ul>
@@ -119,7 +118,7 @@ $sel = mysql_query($sql1)or die(mysql_error());
 
                                   <?php while($data = mysql_fetch_assoc($sel))
                                   
-                                  {
+                                  {q
                                   
                                   ?>
 
@@ -270,58 +269,79 @@ $sel = mysql_query($sql1)or die(mysql_error());
 
 
 
-<!--  this stuff remains here   --->
+<!--  Search Area Section   -->
+<?php 
 
-<!-- banner -->
-<div class="inside-banner">
-  <div class="container"> 
-    <span class="pull-right"><a href="index.php">Home</a> / Agents</span>
-    <h2>Agents</h2>
-</div>
-</div>
-<!-- banner -->   
-<div class="banner-search">
-  <div class="container"> 
-    <!-- banner -->
-    <h3>Buy, Sale & Rent</h3>
-    <div class="searchbar">
-      <div class="row">
-        <div class="col-lg-6 col-sm-6">
-          <form action="buysalerent.php" method="post" >
-            <input name="key" type="text" class="form-control" placeholder="Search of Properties">
-            <div class="row">
-              <div class="col-lg-3 col-sm-3 ">
-                <select class="form-control" name="for">
-                  <option value="">For</option>
-                  <option value="Buy">Buy</option>
-                  <option value="Rent">Rent</option>
-                  <option value="Sale">Sale</option>
-                </select>
-              </div>
-              <div class="col-lg-3 col-sm-4">
-                <select class="form-control" name="price">
-                  <option value="">Price</option>
-                  <option value="150000 AND 200000"><?php echo currency; ?>150,000 - <?php echo currency; ?>200,000</option>
-                  <option value="200000 AND 250000"><?php echo currency; ?>200,000 - <?php echo currency; ?>250,000</option>
-                  <option value="250000 AND 300000"><?php echo currency; ?>250,000 - <?php echo currency; ?>300,000</option>
-                  <option value="300000"><?php echo currency; ?>300,000 - above</option>
-                </select>
-              </div>
-              <div class="col-lg-3 col-sm-4">
-                <select class="form-control" name="type">
-                  <option value="">Property Type</option>
-                  <option value="Apartment">Apartment</option>
-                  <option value="Building">Building</option>
-                  <option value="Office Space">Office Space</option>
-                </select>
-              </div>
-              <input type="hidden" name="search" value="search">
-              <div class="col-lg-3 col-sm-4">
-                <button class="btn btn-success"  onclick="window.location.href='buysalerent.php'">Find Now</button>
-              </div>
-            </div>
-          </form>
-        </div>
+//get data to get name
+$data  =  gat_agent_detail();
+
+    //print_r($data);
+
+?>
+
+<!--  entire  search area -->
+ <div id="memberbanner"> 
+  <!--  <div class="inside-banner">-->  
+    <div>
+          <div class="container"> 
+                <span class="pull-right"><img alt="some img goes here" src="#" />  <!--  to add an image here later--></span>
+                <h2><?php echo $data['name']; ?></h2>
+          </div> <!--  end of div container -->
+    </div>  <!--  end of div inside banner -->
+  
+  
+    <div>
+        <div class="container">  
+              <div class="greaterlondon">
+                    <h3>Search our Large Selection of Homes for Sale, Properties to Rent,</h3>
+                    <h3>House Shares, Student Accomodations and Rooms in London.</h3>
+              </div>   <!--  end of div greater london -->
+              <div class="searchbar">
+              <div class="row">
+                    <div class="col-lg-6 col-sm-6">
+                            <form action="buysalerent.php" method="post" >
+                            <input name="key" type="text" class="form-control" 
+                              placeholder="e.g. 'Cannary Wharf', 'NW3', 'E12', 'Waterloo station'">
+                            <div class="row">
+                                    <div class="col-lg-3 col-sm-3 ">
+                                            <select class="form-control" name="for">
+                
+                                                  <option value="Buy">For Sale</option>
+                                                  <option value="Rent">To Rent</option>
+                 
+                                            </select>
+                                    </div>  <!--  end of div col-lg-3-->
+                                    <div class="col-lg-3 col-sm-4">
+                                        <select class="form-control" name="price">
+                                          <option value="">Price</option>
+                                          <option value="60000 AND 80000"><?php echo currency; ?>60,000 - <?php echo currency; ?>80,000</option>
+                                          <option value="80000 AND 100000"><?php echo currency; ?>80,000 - <?php echo currency; ?>100,000</option>
+                                          <option value="100000 AND 120000"><?php echo currency; ?>100,000 - <?php echo currency; ?>120,000</option>
+                                          <option value="120000 AND 150000"><?php echo currency; ?>120,000 - <?php echo currency; ?>150,000</option>
+                                          <option value="150000 AND 200000"><?php echo currency; ?>150,000 - <?php echo currency; ?>200,000</option>
+                                          <option value="200000 AND 250000"><?php echo currency; ?>200,000 - <?php echo currency; ?>250,000</option>
+                                          <option value="250000 AND 300000"><?php echo currency; ?>250,000 - <?php echo currency; ?>300,000</option>
+                                          <option value="300000"><?php echo currency; ?>300,000 - above</option>
+                                        </select>
+                                    </div>  <!--  end of div col-lg-3 -->
+                                    <div class="col-lg-3 col-sm-4">
+                                          <select class="form-control" name="type">
+                                            <option value="">Property Type</option>
+                                            <option value="Houses">Houses</option>
+                                            <option value="Apartment">Flats/ Apartments</option>
+                                            <option value="Rooms">Rooms</option>
+                                          </select>
+                                    </div>   <!--  end of div col-lg-3-->
+              
+                                    <input type="hidden" name="search" value="search">
+                                    <div class="col-lg-3 col-sm-4">
+                                      <button class="btn btn-success"  onclick="window.location.href='buysalerent.php'">Find Now</button>
+                                    </div>
+                              </div>  <!--  end of div row -->
+                        </form>
+        </div>   <!--  end of div col-lg-6 -->
+
+
         <div class="col-lg-5 col-lg-offset-1 col-sm-6 ">
           <?php
 		if(($_SESSION['AGENT'] == ''))
@@ -337,7 +357,11 @@ $sel = mysql_query($sql1)or die(mysql_error());
     </div>
   </div>
 </div>
-<!-- banner -->
+</div>  <!--  end of div memberbanners -->
+  <!--  end of entire search area -->
+
+
+
 <div class="container">
 <div class="properties-listing spacer"> <a href="buysalerent.php?task=all" class="pull-right viewall">View All Listing</a>
   <h2>Featured Properties</h2>

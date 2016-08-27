@@ -166,15 +166,56 @@ button.btn.btn-success {
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 	background-color: #72b70f;
 }
+
 .banner-search {
 	background: url(../images/bginside.jpg) #111;
 	color: #fff;
 	padding: 20px 0 10px 0;
 	font-size: 16px;
 }
+
+
+#memberbanner {
+	background: url(../images/london-d.jpg) #111 0% 0;
+    	color: #fff;
+    	padding: 20px 0 170px 0;
+    	font-size: 16px;
+    	background-position: 0px -280px;
+}
+
+
+.banner-search {
+	/*background: url(../images/londonestates.jpg) #111;*/
+	color: #fff;
+	padding: 20px 0 10px 0;
+	font-size: 16px;
+}
+
+
+
+
 .banner-search h3 {
 	color: #fff;
 }
+
+.greaterlondon {
+	background-color: rgba(255,255,255,.7);
+	/*background-color: rgba(223, 236, 206, 0.75);*/
+    	width: 68%;
+    	padding: .75em 1em;
+    	margin-bottom: 2em;
+   	border-radius: 10px;
+    	box-shadow: 0px 1px 1px rgba(21, 21, 21, 0.3);
+}
+
+.greaterlondon h3 {
+	margin: 0;
+    	line-height: 28px;
+    	color: #262121;
+    	text-shadow: 1px 1px 1px #eaeaea;
+}
+
+
 .properties-listing .viewall {
 	margin-top: 15px;
 }
@@ -223,8 +264,26 @@ button.btn.btn-success {
             }
 
 
-	
+}
 
+@media (max-width: 1199px) {
+	.image-holder img {
+		height: 200px;
+	}
+}
+
+
+@media (max-width: 991px) {
+	.image-holder img {
+		height: 150px;
+	}
+}
+
+@media (max-width: 767px) {
+	.image-holder img {
+		height: auto;
+		width: 100%;
+	}
 }
 
 
@@ -319,11 +378,12 @@ button.btn.btn-success {
 	width: 100%;
 	border-radius: 5px;
 }
-/*inside*/
+
+
 .inside-banner {
 	background: url(../images/bginside.jpg) #222;
 	color: #fff;
-	padding: 30px 0;
+	padding: 30px 0 15px;
 }
 .inside-banner h2 {
 	margin: 0;
@@ -650,7 +710,8 @@ h2 {
 
 
 .membershelp {
-	
+	width: 97%;
+	margin-left: 1em;
 
 }
 
@@ -754,7 +815,7 @@ span.desc {
 }
 
 #miniprofile h4 {
-	font-size: 16px;
+	font-size: 18px;
     	line-height: 22px;
     	color: #292f21;
     	text-shadow: 1px 1px 7px rgba(165, 183, 141,.3);
@@ -820,4 +881,11 @@ ul#usernav {
 
 #comehere {
 	padding-top: 1em;
+}
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+   
 }
