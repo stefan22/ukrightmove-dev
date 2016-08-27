@@ -374,6 +374,7 @@ $data  =  gat_agent_detail();
 <div class="container">
 <div class="properties-listing spacer"> <a href="buysalerent.php?task=all" class="pull-right viewall">View All Listing</a>
   <h2>Featured Properties</h2>
+
   <div id="owl-example" class="owl-carousel">
     <?php $sel = get_property();
 	 while($data = mysql_fetch_assoc($sel))
@@ -383,10 +384,30 @@ $data  =  gat_agent_detail();
       <div class="image-holder"><img src="images/properties/<?php echo $data['pimage']; ?>" class="img-responsive" alt="properties"/>
         <div class="status sold"><?php echo $data['pfor']; ?></div>
       </div>
-      <h4><a href="property-detail.php?pid=<?php echo $data['pid']; ?>"><?php echo stripslashes($data['ptitle']); ?></a></h4>
-      <p class="price"><?php echo currency; ?><?php echo $data['pprice']; ?></a></p>
-      <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $data['bedroom']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room"><?php echo $data['livingroom']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking"><?php echo $data['parking']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen"><?php echo $data['kitchen']; ?></span> </div>
-      <a class="btn btn-primary" href="property-detail.php?pid=<?php echo $data['pid']; ?>">View Details</a> </div>
+
+      <div class="text-holder abs">
+            <h4>
+                      <a href="property-detail.php?pid=<?php echo $data['pid']; ?>">
+                        <?php echo stripslashes($data['ptitle']); ?>
+                      </a>
+            </h4>
+      </div> <!--  end of div text-holder -->
+      
+      <div class="price-holder">         
+            <p class="price">
+                        <?php echo currency; ?><?php echo $data['pprice']; ?>
+            </p>
+      </div>    <!--  end of div price holder -->     
+
+      <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">
+            <?php echo $data['bedroom']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room"><?php echo $data['livingroom']; ?></span> 
+            <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking"><?php echo $data['parking']; ?></span> 
+            <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen"><?php echo $data['kitchen']; ?></span> 
+      </div>
+      <div clas="button-holder">  
+                    <a class="btn btn-primary featuredbutton" href="property-detail.php?pid=<?php echo $data['pid']; ?>">View Details</a> 
+      </div>  <!--  end of div button holder-->              
+  </div>    <!--  end of div  owl-item -->
     <?php
     
 	}

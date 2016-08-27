@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5 {
 	font-family: din;
 	margin: 0;
 	padding: 0;
-	color: #000
+	color: #353131;
 }
 h1 {
 	font-size: 60px;
@@ -275,7 +275,6 @@ form#memberform {
 
 .allmemoptions {
 	margin-top: 2em;
-    	overflow: auto;
 }
 
 .memberoption {
@@ -315,8 +314,29 @@ form#memberform {
 	margin-bottom: 20px;
 }
 .owl-wrapper-outer div.properties {
-	margin: 0 5px;
+    	background-color: #fff;
+    	text-align: center;
+    	margin-bottom: 20px;
+
 }
+
+.owl-item .status.sold {
+	border: 1px solid rgb(105, 127, 74);
+    	font-size: 15px;
+    	line-height: 27px;
+    	font-style: italic;
+}
+
+.owl-item .image-holder {
+	border-top: 1px solid rgb(105, 127, 74);
+	border-right: 1px solid rgb(105, 127, 74);
+	border-left: 1px solid rgb(105, 127, 74);
+	border-bottom: 0;
+    	font-size: 15px;
+    	line-height: 27px;
+            font-style: italic;
+}
+
 .properties-listing div.properties .image-holder {
 	position: relative;
 }
@@ -340,7 +360,10 @@ form#memberform {
     	height: 50px;
 }
 
-
+/* needs this extra class cause carousel data title is positioned absoulte here*/
+.text-holder.abs {
+     padding-top:25px;
+}
 
 
 
@@ -376,23 +399,14 @@ form#memberform {
 }
 
 
-
-
-
-
-
-
-
 .properties-listing div.properties .status {
 	position: absolute;
-	bottom: 0;
-	z-index: 100;
-	display: block;
-	width: 100%;
-	color: #fff;
-	padding: 0 3px;
-	text-align: right;
-	font-size: 12px;
+    	bottom: -28px;
+    	z-index: 100;
+    	display: block;
+    	width: 101%;
+    	border-top: 0;
+    	left: -1px;
 }
 .properties-listing div.properties p {
 	margin-bottom: 10px;
@@ -733,10 +747,28 @@ h2 {
 
 }
 
+/* featured button styles for feature properties inside  members area*/
+.featuredbutton {
+	width: 60% !important;
+	border-radius: 10px;
+	border: 1px solid #558a09;
+	box-shadow: 0px 1px 1px #294429;
+	color: #f5f5f5;
+	text-shadow: 1px 0px 1px rgba(0,0,0,.3);
+	font-size: 14px;
 
-.space {
-	padding-bottom: 5px
 }
+
+
+
+
+
+
+.space  {
+          padding-bottom: 5px
+}
+
+
 .pagination_button {
 	background: #64a30a;
 	border: none;
