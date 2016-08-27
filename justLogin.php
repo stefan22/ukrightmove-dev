@@ -296,9 +296,10 @@ $data  =  gat_agent_detail();
                     <h3>Search our Large Selection of Homes for Sale, Properties to Rent,</h3>
                     <h3>House Shares, Student Accomodations and Rooms in London.</h3>
               </div>   <!--  end of div greater london -->
+              
               <div class="searchbar">
-              <div class="row">
-                    <div class="col-lg-6 col-sm-6">
+                  <div class="row">
+                      <div class="col-lg-6 col-sm-6">
                             <form action="buysalerent.php" method="post" >
                             <input name="key" type="text" class="form-control" 
                               placeholder="e.g. 'Cannary Wharf', 'NW3', 'E12', 'Waterloo station'">
@@ -339,7 +340,7 @@ $data  =  gat_agent_detail();
                                     </div>
                               </div>  <!--  end of div row -->
                         </form>
-        </div>   <!--  end of div col-lg-6 -->
+                      </div>   <!--  end of div col-lg-6 -->
 
 
         <div class="col-lg-5 col-lg-offset-1 col-sm-6 ">
@@ -352,6 +353,9 @@ $data  =  gat_agent_detail();
           <?php
 		}
       ?>
+
+
+
         </div>
       </div>
     </div>
