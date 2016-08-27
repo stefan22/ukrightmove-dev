@@ -472,4 +472,20 @@ $data  =  gat_agent_detail();
     <br/><br/>
   </div>
 </div>
+
+<script type="text/javascript">
+// members page search form select options parent border color
+$('select.form-control').focus(
+        function() {
+            var $hello = $(this).parent('div').css('border-color', 'green');
+            console.log($hello);
+        }).blur(
+        function() {
+            $(this).parent('div').css('border-color', '');
+});
+</script>
+
+
+
+
 <?php include'footer.php';?>
