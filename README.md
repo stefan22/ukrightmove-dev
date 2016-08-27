@@ -13,3 +13,5 @@ Live site - under development/hosted @godaddys -it allows you to sign in and out
 
 ![members page screenshot](/images/screenshots/eric-cartman-inbox.png?raw=true "members page screenshot")
 
+![members search screenshot](/images/screenshots/membersearch.jpg?raw=true "members search area screenshot")
+
