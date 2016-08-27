@@ -9,7 +9,6 @@
 
 
 
-
   $(function() {
       
         var Page = (function() {
