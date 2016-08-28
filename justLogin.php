@@ -374,6 +374,7 @@ $data  =  gat_agent_detail();
 <div class="container">
 <div class="properties-listing spacer"> <a href="buysalerent.php?task=all" class="pull-right viewall">View All Listing</a>
   <h2>Featured Properties</h2>
+
   <div id="owl-example" class="owl-carousel">
     <?php $sel = get_property();
 	 while($data = mysql_fetch_assoc($sel))
@@ -383,10 +384,30 @@ $data  =  gat_agent_detail();
       <div class="image-holder"><img src="images/properties/<?php echo $data['pimage']; ?>" class="img-responsive" alt="properties"/>
         <div class="status sold"><?php echo $data['pfor']; ?></div>
       </div>
-      <h4><a href="property-detail.php?pid=<?php echo $data['pid']; ?>"><?php echo stripslashes($data['ptitle']); ?></a></h4>
-      <p class="price"><?php echo currency; ?><?php echo $data['pprice']; ?></a></p>
-      <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $data['bedroom']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room"><?php echo $data['livingroom']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking"><?php echo $data['parking']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen"><?php echo $data['kitchen']; ?></span> </div>
-      <a class="btn btn-primary" href="property-detail.php?pid=<?php echo $data['pid']; ?>">View Details</a> </div>
+
+      <div class="text-holder abs">
+            <h4>
+                      <a href="property-detail.php?pid=<?php echo $data['pid']; ?>">
+                        <?php echo stripslashes($data['ptitle']); ?>
+                      </a>
+            </h4>
+      </div> <!--  end of div text-holder -->
+      
+      <div class="price-holder">         
+            <p class="price">
+                        <?php echo currency; ?><?php echo $data['pprice']; ?>
+            </p>
+      </div>    <!--  end of div price holder -->     
+
+      <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">
+            <?php echo $data['bedroom']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room"><?php echo $data['livingroom']; ?></span> 
+            <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking"><?php echo $data['parking']; ?></span> 
+            <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen"><?php echo $data['kitchen']; ?></span> 
+      </div>
+      <div clas="button-holder">  
+                    <a class="btn btn-primary featuredbutton" href="property-detail.php?pid=<?php echo $data['pid']; ?>">View Details</a> 
+      </div>  <!--  end of div button holder-->              
+  </div>    <!--  end of div  owl-item -->
     <?php
     
 	}
@@ -394,40 +415,22 @@ $data  =  gat_agent_detail();
   ?>
   </div>
 </div>
+
 <div class="spacer">
-  <div class="row">
-    
-    
-    <div class="col-lg-6 col-sm-9 recent-view" style="border:1px solid #666666;height:150px;border-radius:5px;">
-      <!-- <h3>About Us</h3> -->
-      		
-      	<h3>tba</h3>
-      		
-      <!--//<?php
-		//$data = get_about_contant(); 
-		//$string1 = addslashes($data['contant']);
-		//$string2 = substr($string1, 0, 300);
-       //?>
-       -->
-      <!--<p> <?php echo $string2 ?> <br>
-        <a href="about.php">Learn More</a></p>-->
-        
-        
-        
-    </div> <!-- end of recent view --->
-    
-    
-    
+      <div class="col-lg-5 col-lg-offset-1 col-sm-9 recent-view">
+            <img src="images/memberspagead.png" alt="google adverb" / >	
+      </div> <!-- end of recent view -->
+
     <div class="col-lg-5 col-lg-offset-1 col-sm-3 recommended">
-      <h3>Recent Properties</h3>
-      <div id="myCarousel" class="carousel slide">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-          <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-        </ol>
-        <!-- Carousel items -->
+          <h3>Recent Properties</h3>
+          <div id="myCarousel" class="carousel slide">
+          <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+         </ol>
+         <!-- Carousel items -->
         <div class="carousel-inner">
           <?php
           $recent = get_recent_property();
@@ -451,9 +454,9 @@ $data  =  gat_agent_detail();
 		  }
 			?>
               <div class="row">
-                <div class="col-lg-4"><img src="images/properties/<?php echo $recent_property['pimage']; ?>" class="img-responsive" alt="properties"/>
+                <div class="col-lg-4 recentimg"><img src="images/properties/<?php echo $recent_property['pimage']; ?>" class="img-responsive" alt="properties"/>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8 recentprop">
                   <h5><a href="property-detail.php?pid=<?php echo $recent_property['pid']; ?>"><?php echo $recent_property['ptitle']; ?></a></h5>
                   <p class="price"><?php echo currency; ?><?php echo $recent_property['pprice']; ?></p>
                   <a href="property-detail.php?pid=<?php echo $recent_property['pid']; ?>" class="more">More Detail</a> 
@@ -465,13 +468,13 @@ $data  =  gat_agent_detail();
 		  $i++;
 		  }
 		  ?>
-          </div> <!-- end of item active --->
-        </div><!-- end of inner carousel --->
-      </div> <!-- end of carousel --->
-    </div> <!-- end of recommended --->
-    <br/><br/>
+          </div> <!-- end of item active -->
+        </div><!-- end of inner carousel -->
+      </div> <!-- end of carousel -->
+    </div> <!-- end of recommended -->
+    
   </div>
-</div>
+</div>  <!--  end of div spacer -->
 
 <script type="text/javascript">
 // members page search form select options parent border color

@@ -74,13 +74,13 @@ $(function(){
 				 <label>Property Title</label>
 	            <input type="text" class="form-control" placeholder="Property Title" name="ptitle" value="<?php echo stripslashes($data['ptitle']); ?>">
              
-               	<label>Proerty For</label>
+               	<label>Property For</label>
                 <select class="form-control" name="pfor">
                 <option value="Buy" <?php if($data['pfor']=="Buy"){?>selected<?php }?> >Buy</option>
                 <option value="Sale" <?php if($data['pfor']=="Sale"){?>selected<?php }?> >Sale</option>
                 <option value="Rent" <?php if($data['pfor']=="Rent"){?>selected<?php }?> >Rent</option>
                 </select>
-                <label>Proerty Type</label>
+                <label>Property Type</label>
                 <select class="form-control" name="ptype">
                 <option value="Apartment" <?php if($data['ptype']=="Apartment"){?>selected<?php }?> >Apartment</option>
                 <option value="Building" <?php if($data['ptype']=="Building"){?>selected<?php }?>>Building</option>
@@ -89,7 +89,7 @@ $(function(){
              
                <input type="hidden" name="pid" value="<?php echo $data['pid']; ?>">
              
-             <label>Property Description</label>
+             <label>Property Description  remove some features - test to make sure right input uploaded</label>
                 <textarea placeholder="" name="pdetail" class="form-control">
                 <?php echo stripslashes($data['pdetail']); ?>
               </textarea>
@@ -97,18 +97,25 @@ $(function(){
                      CKEDITOR.replace( 'pdetail' );
               </script>   
                 <label>Property Address</label>
+
                 <textarea class="form-control"  name="add"><?php echo $data['paddress']; ?> </textarea>
-                <input type="hidden" name="agent_id" value="<?php echo $_SESSION['AGENT']['id']; ?>">
+                    <input type="hidden" name="agent_id" value="<?php echo $_SESSION['AGENT']['id']; ?>">
+                
                 <label>Price</label>
-                <input type="text" class="form-control"  name="pprice"  value="<?php echo $data['pprice']; ?>" >
-                 <label>Bed Rooms</label>
-               	<input type="text" class="form-control"  name="bedroom" value="<?php echo $data['bedroom']; ?>" >
-                 <label>Living Rooms</label>
-                <input type="text" class="form-control"  name="livingroom" value="<?php echo $data['livingroom']; ?>">
-                <label>Parking</label>
-                <input type="text" class="form-control"  name="parking" value="<?php echo $data['parking']; ?>">
-                 <label>Kitchen</label>
-                <input type="text" class="form-control"  name="kitchen" value="<?php echo $data['kitchen']; ?>">
+                    <input type="text" class="form-control"  name="pprice"  value="<?php echo $data['pprice']; ?>" >
+                 
+                 <label>Bed Rooms -- Only number or will break layout - will come back to this</label>
+               	    <input type="text" class="form-control"  name="bedroom" value="<?php echo $data['bedroom']; ?>" >
+                 
+                 <label>Living Rooms -- Only number or will break layout - will come back to this</label>
+                    <input type="text" class="form-control"  name="livingroom" value="<?php echo $data['livingroom']; ?>">
+                
+                <label>Parking -- Only number or will break layout - will come back to this</label>
+                    <input type="text" class="form-control"  name="parking" value="<?php echo $data['parking']; ?>">
+                
+                <label>Kitchen -- Only number or will break layout - will come back to this</label>
+                    <input type="text" class="form-control"  name="kitchen" value="<?php echo $data['kitchen']; ?>">
+              
               <label>Map Latitude</label>
                <input type="text" name="lat" value="<?php echo $data['plat']; ?>" class="form-control">
                <label>Map Longitude</label>
