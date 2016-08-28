@@ -416,7 +416,7 @@ $data  =  gat_agent_detail();
   </div>
 </div>
 
-<div class="spacer">
+<div class="pagebottom">
       <div class="col-lg-5 col-lg-offset-1 col-sm-9 recent-view">
             <img src="images/memberspagead.png" alt="google adverb" / >	
       </div> <!-- end of recent view -->

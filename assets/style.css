@@ -69,8 +69,16 @@ span.pull-right a:hover {
 .spacer {
 	margin-top: 50px;
 	margin-bottom: 40px;
-	overflow: auto;
+	
 }
+
+.pagebottom {
+     margin-top: 50px;
+     margin-bottom: 40px;
+     overflow: auto;
+}
+
+
 .center {
 	text-align: center;
 }
