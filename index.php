@@ -1,6 +1,6 @@
 <?php 
 
-include'header.php';
+include 'header1.php';
 error_reporting(0);
 $Get_slider= get_image_slider();
 $Get_slider['img'];
@@ -10,70 +10,72 @@ $str = explode(',',$Get_slider['img']);
 				
 ?>
 
-<div class="">
-<div id="slider" class="sl-slider-wrapper">
-  <div class="sl-slider">
-    <?php 
-	
-		foreach($str as $test)
-		{
-			$slider = get_property_selected($test);
-			if($i % 2 == 0  )
-			{
-			?>
-    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25"
-     data-slice1-scale="2" data-slice2-scale="2">
-      <?php
-			}
-			else
-			{
-			?>
-      <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" 
-      data-slice1-scale="1.5" data-slice2-scale="1.5">
-        <?php	
-			}
-			?>
-        <div class="sl-slide-inner">
-          <div class="bg-img" style="background-image:url(images/properties/<?php echo $slider['pimage']; ?>);" ></div>
-          <h2><a href="property-detail.php?pid=<?php echo $slider['pid'];  ?>"><?php echo $slider['ptitle'];  ?></a></h2>
-          <blockquote>
-            <p class="location"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $slider['paddress'];  ?></p>
-            <p><?php echo substr ($slider['pdetail'],0,200);  ?></p>
-            <cite><?php echo currency.' '.$slider['pprice'];  ?></cite> </blockquote>
-        </div>
-      </div>
-      <?php
-			 $i++;
-		}
-		?>
-    </div>
-    <!-- /sl-slider -->
-    
-    <nav id="nav-dots" class="nav-dots">
-      <?php
-        $i=0;
-        foreach($str as $test)
-        {
-			if($i  == 0 )
-			{
-			?>
-      <span class="nav-dot-current"></span>
-      <?php
-    		}
-			else
-			{
-			?>
-      <span></span>
-      <?php
-        		
-			}
-			$i++;
-        }
-		?>
-    </nav>
-  </div>
-  <!-- /slider-wrapper --> 
-</div>
+<div class="showcase">
+    <div id="slider" class="sl-slider-wrapper">
+          <div class="sl-slider">
+            <?php 
+        	
+        		foreach($str as $test)
+        		{
+        			$slider = get_property_selected($test);
+        			if($i % 2 == 0  )
+        			{
+        			?>
+            <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25"
+             data-slice1-scale="2" data-slice2-scale="2">
+              <?php
+        			}
+        			else
+        			{
+        			?>
+              <div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" 
+              data-slice1-scale="1.5" data-slice2-scale="1.5">
+                <?php	
+        			}
+        			?>
+                <div class="sl-slide-inner">
+                  <div class="bg-img" style="background-image:url(images/properties/<?php echo $slider['pimage']; ?>);" ></div>
+                  <h2><a href="property-detail.php?pid=<?php echo $slider['pid'];  ?>"><?php echo $slider['ptitle'];  ?></a></h2>
+                  <blockquote>
+                    <p class="location"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $slider['paddress'];  ?></p>
+                    <p><?php echo substr ($slider['pdetail'],0,200);  ?></p>
+                    <cite><?php echo currency.' '.$slider['pprice'];  ?></cite> </blockquote>
+                </div>
+              </div>
+              <?php
+        			 $i++;
+        		}
+        		?>
+            </div>
+            <!-- /sl-slider -->
+            
+                  <nav id="nav-dots" class="nav-dots">
+                    <?php
+                      $i=0;
+                      foreach($str as $test)
+                      {
+              			if($i  == 0 )
+              			{
+              			?>
+                    <span class="nav-dot-current"></span>
+                    <?php
+                  		}
+              			else
+              			{
+              			?>
+                    <span></span>
+                    <?php
+                      		
+              			}
+              			$i++;
+                      }
+              		?>
+                  </nav>
+          </div>   <!--  end of div slider-wrapper -->
+  
+</div>    <!--  end of div showcase -->
+
+
 <div class="banner-search">
   <div class="container"> 
     <!-- banner -->
@@ -188,8 +190,10 @@ $str = explode(',',$Get_slider['img']);
       </div>
     </div>
   </div>
-</div>
-<!-- banner -->
+</div>    <!--  end of div comment -->
+
+
+
 <div class="container">
 <div class="properties-listing spacer"> <a href="buysalerent.php?task=all" class="pull-right viewall">View All Listing</a>
 

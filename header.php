@@ -295,7 +295,7 @@ else   {
      if (strpos( $_SERVER['REQUEST_URI'] , 'justLogin.php' ))  {
 
 ?>
-           <!-- justLogin.php  --->
+           <!-- justLogin.php  -->
 
 
  <?php            
