@@ -122,6 +122,7 @@ if(strpos( $_SERVER['REQUEST_URI'] , 'register.php' ))
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
+
 <link rel="stylesheet" href="assets/style.css"/>
 
 <!-- disabled deprecated jquery -->
@@ -135,7 +136,7 @@ if(strpos( $_SERVER['REQUEST_URI'] , 'register.php' ))
 
 <script src="assets/bootstrap/js/bootstrap.js"></script>
 <script src="assets/script.js"></script>
-<script language="javascript">
+<script type="text/javascript">
 
 
 $(document).ready(function(){
@@ -177,6 +178,41 @@ $(document).ready(function(){
         document.getElementById('fade').style.display='none'
     }
     </script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    //grab values for true or false
+    var forsale = $('input#forsale').is('checked');
+    var torent = $('input#torent').is('checked');
+    console.log('for sale is: ' + forsale);
+    console.log('to rent is: ' + torent);
+
+$('.form-group input[type="checkbox"]').on('change', function() {
+        
+         if ($('input#forsale').is('checked')) {
+            $('#forsalecheck span.glyphicon').css("content", "\e013");
+           $('#torentcheck span').css('display','none');
+           
+         } else {
+            $('#torentcheck span.glyphicon').css("content", "\e013");
+            $('#forsalecheck span').css('display', 'none');
+           
+         }
+
+});
+
+  
+
+  
+
+
+
+
+
+});
+</script>
+
 
 
 </head>
@@ -317,23 +353,57 @@ else   {
                                               <h1>Find your perfect home</h1>
                                                   <h3>Search properties for sale and to rent in London</h3>
                                                   
-                                            </div>   <!--  end of div greater london -->
+                                            </div>   <!--  end of div greaterlondonhome -->
                                             
                                             <div class="searchbarheader">
                                                 <div class="row">
                                                     <div class="col-lg-8 col-sm-6">
-                                                          <form action="buysalerent.php" method="post" id="memberform">
-                                                              <input name="key" type="text" class="form-control" 
-                                                                  placeholder="e.g. 'Cannary Wharf', 'NW3', 'E12', 'Camden station'">
-                                                                  
-                                                                      <div class="allmemoptions">
-                                                                          <div class="col-lg-3 col-sm-3 memberoption">
-                                                                                  <select class="form-control" name="for">
-                                                                                        <option value="Buy">For Sale</option>
-                                                                                        <option value="Rent">To Rent</option>
-                                                                                  </select>
-                                                                          </div>  <!--  end of div col-lg-3-->
+                                                          <form action="buysalerent.php" method="post" id="headerform">
+                                                                  <div class="input-group">    
+                                                                      <input name="key" type="text" class="form-control" 
+                                                                        placeholder="e.g. Cannary Wharf', 'NW3', 'E12', 'Camden station'">
+                                                                        <div class="input-group-btn">
+                                                                          <input type="hidden" name="search" value="search">
+                                                                        <button class="btn btn-success membersearchbutton" type="button" onclick="window.location.href='buysalerent.php'">Find now!</button>
+                                                                        </div>
+                                                                  </div>  <!--  end of div input-group -->
 
+                                                                  <div class="allmemoptions">                
+                                                                  <!--fancy checkboxes code   http://bootsnipp.com/snippets/featured/fancy-bootstrap-checkboxes -->
+                                                                         <div class="col-lg-4 col-sm-4 homeoption">
+                                                                                  <div class="[ form-group ]">
+                                                                                        <input type="checkbox" name="forsale" id="forsale" autocomplete="off" />
+                                                                                        <div class="[ btn-group ]">
+                                                                                            <label for="forsale" class="[ btn btn-default ]" id="forsalecheck">
+                                                                                                <span class="glyphicon"></span>
+                                                                                                <span> </span>
+                                                                                            </label>
+                                                                                            <label for="forsale" class="[ btn btn-default active ]" id="forsaledata">
+                                                                                                For Sale
+                                                                                            </label>
+                                                                                        </div>
+                                                                                  </div>  <!--  end of div form-group -->
+                                                                         </div>  <!--  end of div homeoption -->         
+                                                                                  
+                                                                         <div class="col-lg-4 col-sm-4 homeoption">         
+                                                                                  <div class="[ form-group ]">
+                                                                                        <input type="checkbox" name="torent" id="torent" autocomplete="off" checked/>
+                                                                                        <div class="[ btn-group ]">
+                                                                                            <label for="torent" class="[ btn btn-default ]" id="torentcheck">
+                                                                                                <span class="glyphicon"></span>
+                                                                                                <span> </span>
+                                                                                            </label>
+                                                                                            <label for="torent" class="[ btn btn-default active ]" id="torentdata">
+                                                                                                To Rent
+                                                                                            </label>
+                                                                                        </div>
+                                                                                  </div>  <!--  end of div form-group -->  
+                                                                         </div>  <!--  end of div homeoption 2 of 2 -->                    
+
+                                                                       
+
+                                              <!-- disable options go in advance search option
+                                              
                                                                           <div class="col-lg-3 col-sm-4 memberoption">
                                                                               <select class="form-control" name="price">
                                                                                 <option value="">Price</option>
@@ -346,8 +416,8 @@ else   {
                                                                                 <option value="250000 AND 300000"><?php echo currency; ?>250,000 - <?php echo currency; ?>300,000</option>
                                                                                 <option value="300000"><?php echo currency; ?>300,000 - above</option>
                                                                               </select>
-                                                                          </div>  <!--  end of div col-lg-3 -->
-
+                                                                          </div>  <!- end of div col-lg-3 -->
+<!--
                                                                         <div class="col-lg-3 col-sm-4 memberoption">
                                                                               <select class="form-control" name="type">
                                                                                 <option value="">Property Type</option>
@@ -355,23 +425,19 @@ else   {
                                                                                 <option value="Apartment">Flats/ Apartments</option>
                                                                                 <option value="Rooms">Rooms</option>
                                                                               </select>
-                                                                        </div>   <!--  end of div col-lg-3-->
-                                                  
-                                                                        <input type="hidden" name="search" value="search">
-                                                                        <div class="col-lg-3 col-sm-4">
-                                                                            <button class="btn btn-success membersearchbutton"  onclick="window.location.href='buysalerent.php'">Find Now</button>
-                                                                        </div>
-                                                                   </div>   <!--  end of div allmemoptions -->        
-
+                                                                        </div>   <!-  end of div col-lg-3-->
+ <!--                                                                   </div>   <!-  end of div allmemoptions -->        
+ 
                                                       </form>
-                                                    </div>   <!--  end of div col-lg-6 -->
+                                                    </div>   
+                                                </div>    <!--  end of div col-lg-8 -->       
 
-
-                                                  <div class="col-lg-3 col-sm-6 searchlogin ">
+                                                 
                                                         <?php
                                                           if(($_SESSION['AGENT'] == ''))
                                                           {
                                                           ?>
+                                                        <div class="col-lg-3 col-sm-6 searchlogin ">  
                                                         <p>Join now and be the first to see new properties.</p>
                                                         <button class="btn btn-info"   data-toggle="modal" data-target="#loginpop">Login</button>
                                                           <?php
@@ -380,17 +446,22 @@ else   {
 
 
 
-                                                      </div>
+                                                    
                                                     </div>
                                                   </div>
-                                                </div>
+                                                </div> <!--  end of div searchbarheader -->
                                               
-                                              </div>  <!--  end of div memberbannershome -->
-                                                <!--  end of entire search area -->
+                                              </div>   <!--  end of div container -->
+
+
+
+
+
+                                     </div>    <!---  end of div memberbannerhome  -->         
 
 
                                              
-                                  </div>    <!---  end of container div  -->
+                                  
 
                                   <?php
                                   }

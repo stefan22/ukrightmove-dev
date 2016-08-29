@@ -228,18 +228,11 @@ $str = explode(',',$Get_slider['img']);
       		
       	<h3>tba</h3>
       		
-      <!--//<?php
-		//$data = get_about_contant(); 
-		//$string1 = addslashes($data['contant']);
-		//$string2 = substr($string1, 0, 300);
-       //?>
-       -->
-      <!--<p> <?php echo $string2 ?> <br>
-        <a href="about.php">Learn More</a></p>-->
+      
         
         
         
-    </div> <!-- end of recent view --->
+    </div> <!-- end of recent view -->
     
     
     
@@ -293,7 +286,7 @@ $str = explode(',',$Get_slider['img']);
           </div> <!-- end of item active --->
         </div><!-- end of inner carousel --->
       </div> <!-- end of carousel --->
-    </div> <!-- end of recommended --->
+    </div> <!- end of recommended -->
     <br/><br/>
   </div>
 </div>

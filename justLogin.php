@@ -480,7 +480,7 @@ $data  =  gat_agent_detail();
 // members page search form select options parent border color
 $('select.form-control').focus(
         function() {
-            var $hello = $(this).parent('div').css('border-color', 'green');
+            var $hello = $(this).parent('div').css('border', '2px solid #a7e849');     //2px solid #a7e849;
             console.log($hello);
         }).blur(
         function() {
