@@ -168,6 +168,7 @@ button.btn.btn-success {
 	padding-bottom: 10px;
 	font-family: din;
 	text-transform: uppercase;
+               line-height: 33px;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 	background-color: #72b70f;
@@ -349,7 +350,7 @@ form#memberform {
 /*bootstrap end*/
 
 .allmemoptions {
-	margin-top: 2em;
+	margin:2em 0 1em;
                overflow: auto;
 }
 
@@ -362,7 +363,42 @@ form#memberform {
     	border: 1px solid rgb(202, 199, 199);
     	outline: none;
 }
+/* targets home page main search section buttons */
+#headerform a.btn.active.btn-success {
+     padding: 6px 12px;
+     margin-bottom: 0;
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 1.42857143;
+     text-align: center;
+     white-space: nowrap;
+     vertical-align: middle;
+     background: #72b70f;
+     border: 1px solid #72b70f;
+     text-shadow: 0 -1px 0 rgba(0,0,0,.2);
 
+}
+
+#headerform a.btn.active.btn-danger, #headerform a.btn.active.btn-danger:focus, #headerform a.btn.active.btn-danger:active {
+     background-color: #99999e;
+     border-color: #999999;
+     outline: 0;
+}
+
+
+.btn-group-justified {
+     outline: 0;
+}
+
+.torent div {
+     margin-top: .3em;
+     margin-left: .15em;
+}
+
+.forsale div {
+     margin-top: .3em;
+     margin-left: .15em;
+}
 
 .memberoption select {
 	height: 46px;
@@ -992,7 +1028,10 @@ li.home {
 }
 
 span.desc {
-	color:#898989;
+	color: #898989;
+               line-height: 42px;
+               font-size: 13px;
+               padding-right: 1em;
 }
 
 /* removes home main nav tab description when screen size under 1100px;*/
