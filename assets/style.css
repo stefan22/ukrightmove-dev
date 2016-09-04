@@ -115,11 +115,11 @@ button.btn.btn-success {
 	outline: none;
 }
 .btn-success {
-	background: #72b70f;
-	border: 1px solid #72b70f;
-	padding: 6px 20px;
-	font-size: 16px;
-	width: 100%;
+	background: #88de0d;
+    border: 1px solid #72b70f;
+    padding: 6px 20px;
+    font-size: 16px;
+    width: 100%;
 }
 .btn-primary {
 	background: #64a30a;
@@ -161,6 +161,7 @@ button.btn.btn-success {
 }
 .navbar-inverse {
 	background-color: #111;
+               border-radius: 0;
 }
 .navbar-inverse .navbar-nav > li > a {
 	font-size: 14px;
@@ -173,6 +174,23 @@ button.btn.btn-success {
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 	background-color: #72b70f;
 }
+
+.container.searchbanner {
+    max-height: 495px;
+    width: 66%;
+    padding: 30px 1.5em 45px 1.5em;
+    /* background: -webkit-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); */
+    /* background: linear-gradient(to bottom, rgb(207, 244, 130) 0%,rgb(143, 182, 57) 100%); */
+    box-shadow: 0px 2px 1px 1px rgba(17, 17, 20,.6);
+    border-bottom: 1px solid rgb(97, 105, 117);
+    border-top: 2px solid rgb(239, 215, 214);
+
+}
+
+.box-content > p {
+     display: none;
+}
+
 
 .banner-search {
 	background: url(../images/bginside.jpg) #111;
@@ -199,9 +217,14 @@ button.btn.btn-success {
 
 #memberbannerhome {
      color: #fff;
-     padding: 30px 0 45px 0;
-     font-size: 16px;
-    
+    border-top: 1px solid rgba(129, 113, 112, 0.75);
+    font-size: 16px;
+    background: linear-gradient(to bottom, rgba(211, 234, 163, 0.5) 0%,rgb(250, 250, 250) 30%, rgb(236, 236, 236) 80%, rgba(223, 250, 164, 0.84) 100%);
+    border-bottom: 1px solid rgb(110, 116, 95);
+    background-image: url(../images/londonestates.png);
+    opacity: .95;
+    background-position: left top;
+
 }
 
 
@@ -349,6 +372,20 @@ form#memberform {
 }
 /*bootstrap end*/
 
+div.torent {
+     color: #fff;
+     font-size: 16px;
+     text-shadow: 0 1px 1px #000;
+     line-height: 20px;
+}
+
+div.forsale {
+     color: #fff;
+     font-size: 16px;
+     text-shadow: 0 1px 1px #000;
+     line-height: 20px;
+}
+
 .allmemoptions {
 	margin:2em 0 1em;
                overflow: auto;
@@ -365,17 +402,17 @@ form#memberform {
 }
 /* targets home page main search section buttons */
 #headerform a.btn.active.btn-success {
-     padding: 6px 12px;
-     margin-bottom: 0;
-     font-size: 14px;
-     font-weight: 400;
-     line-height: 1.42857143;
-     text-align: center;
-     white-space: nowrap;
-     vertical-align: middle;
-     background: #72b70f;
-     border: 1px solid #72b70f;
-     text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+     padding: 6px 9px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background: #90e614;
+    border: 1px solid #72b70f;
+    text-shadow: 0px 1px 1px rgba(0,0,0,.55);
 
 }
 
@@ -1016,14 +1053,14 @@ span.helpback {
 
 li.home {
 	position: absolute;
-	top: 8px;
-	left: 10px;
+               top: 8.5px;
+               left: 14px;
 }
 
 .navbar-inverse .navbar-nav > li.home > a {
 	display: inline;
 	color: #ffffff;
-	font-size: 18px;
+	font-size: 20px;
 	text-transform: none;
 }
 
