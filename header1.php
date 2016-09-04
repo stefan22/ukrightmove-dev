@@ -350,7 +350,7 @@ else   {
                         ?>
                             
                 
-                                      <div class="container">  
+                                      <div class="container searchbanner">  
                                             <div class="greaterlondonhome">
                                               <h1>Find your perfect home</h1>
                                                   <h3>Search properties for sale and to rent in London</h3>
