@@ -9,7 +9,7 @@ Live site - under development/hosted @godaddys -it allows you to sign in and out
 - All configurations: database name, phpMyAdmin, tables, usernames,passwords etc -> under admin folder (.gitignore)
 
 Home page top section screenshot:
-![current home-page topsection screenshot](/images/homepage-screenshot.png?raw=true "urrent home-page topsection screenshot")
+![current home-page topsection screenshot](/images/screenshots/homepage-screenshot.png?raw=true "current home-page topsec screenshot")
 
 Property detail page screenshot:
 ![current property-detail.php screenshot](/images/ukrmove-screenshot.png?raw=true "current property-detail.php screenshot")
