@@ -8,6 +8,9 @@ Live site - under development/hosted @godaddys -it allows you to sign in and out
   and connects to remote database via IP | No MAMP or WAMP !  
 - All configurations: database name, phpMyAdmin, tables, usernames,passwords etc -> under admin folder (.gitignore)
 
+Home page top section screenshot:
+![current home-page topsection screenshot](/images/homepage-screenshot.png?raw=true "urrent home-page topsection screenshot")
+
 Property detail page screenshot:
 ![current property-detail.php screenshot](/images/ukrmove-screenshot.png?raw=true "current property-detail.php screenshot")
 
