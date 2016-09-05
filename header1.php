@@ -359,7 +359,8 @@ else   {
                                             
                                             <div class="searchbarheader">
                                                 <div class="row">
-                                                    <div class="col-lg-8 col-sm-6">
+                                                
+                                                    <div class="col-lg-8 col-lg-offset-2 col-sm-6">
                                                           <form action="buysalerent.php" method="post" id="headerform">
                                                                   
                                                                   <div class="input-group">    
@@ -416,7 +417,7 @@ else   {
  
                                                       </form>
                                                     </div>    <!--  end of div col-lg-8 -->  
-                                                 
+                                                
 
                                                  
                                                         <?php

@@ -176,14 +176,15 @@ button.btn.btn-success {
 }
 
 .container.searchbanner {
-    max-height: 495px;
+    max-height: 425px;
     width: 66%;
-    padding: 30px 1.5em 45px 1.5em;
-    /* background: -webkit-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); */
-    /* background: linear-gradient(to bottom, rgb(207, 244, 130) 0%,rgb(143, 182, 57) 100%); */
-    box-shadow: 0px 2px 1px 1px rgba(17, 17, 20,.6);
+    padding: 30px 1.5em 10px 1.5em;
+    box-shadow: 0px 1px 0px .5px rgba(17, 17, 20,.6);
     border-bottom: 1px solid rgb(97, 105, 117);
     border-top: 2px solid rgb(239, 215, 214);
+    border-radius: 4px;
+    margin-bottom: 2em;
+    margin-top: 1.2em;
 
 }
 
@@ -201,7 +202,10 @@ button.btn.btn-success {
 
 #headerform input {
           height: 60px;
-          font-size: 16px;
+         font-size: 16px;
+         border: 1px solid rgba(142, 223, 25, 0.55);
+         border-style: outset;
+         box-shadow: 2px 0px 2px 0px rgba(142, 223, 25, 0.3);
 }
 
 #headerform button.btn.btn-default.btn-lg {
@@ -270,12 +274,15 @@ button.btn.btn-success {
 }
 
 .greaterlondonhome {
-          padding: .75em 1em;
-          margin-bottom: 2em;
-          border-radius: 10px;
-          box-shadow: 0px 1px 1px rgba(21, 21, 21, 0.3);
-          border: 1px solid #cccccc;
-          text-align: center;
+          padding: .5em 1em;
+         /* margin-bottom: 2em; */
+         border-radius: 10px;
+         box-shadow: 0px 1px 1px rgba(21, 21, 21, 0.3);
+         border: 1px solid #cccccc;
+         text-align: center;
+         border-bottom-left-radius: 0;
+         border-bottom-right-radius: 0;
+         border-bottom: none;
 
 }
 
@@ -305,12 +312,23 @@ button.btn.btn-success {
 }
 
 .searchbarheader {
-	padding: .75em 1em;
-               margin-bottom: 2em;
-               border-radius: 10px;
-               box-shadow: 0px 1px 1px rgba(21, 21, 21, 0.3);
-               color: #999999;
-               border: 1px solid #cccccc;
+	padding: .7em 0 0 .7em;
+              margin-bottom: 1em;
+              border-radius: 10px;
+              box-shadow: inset 0px 0px 5px 0px rgb(206, 203, 205);
+              color: #999999;
+              border: 1px solid #cccccc;
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+              border-top-style: inset;
+              border-top-color: #fff;
+              
+}
+
+
+.topbottombar {
+     width:75%;
+
 }
 
 .greaterlondon h3 {
@@ -323,14 +341,15 @@ button.btn.btn-success {
 form#memberform {
 
 }
-
+/* search login in the home page - inside of top home search section disabled */
 .searchlogin {
           background-color: rgba(255,255,255,.95);
-          margin-right: 2em;
-          margin-left: 2em;
-          padding: 2em;
-          padding-top: 1.2em;
-          text-align: left;
+         margin-right: 2em;
+         margin-left: 2em;
+         padding: 2em;
+         padding-top: 1.2em;
+         text-align: left;
+         display: none;
 }
 
 .homeoption {
@@ -387,7 +406,7 @@ div.forsale {
 }
 
 .allmemoptions {
-	margin:2em 0 1em;
+	margin: 1em 0 1em;
                overflow: auto;
 }
 
@@ -417,7 +436,7 @@ div.forsale {
 }
 
 #headerform a.btn.active.btn-danger, #headerform a.btn.active.btn-danger:focus, #headerform a.btn.active.btn-danger:active {
-     background-color: #99999e;
+     background-color: #a7a7d1;
      border-color: #999999;
      outline: 0;
 }
