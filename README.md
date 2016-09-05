@@ -11,7 +11,9 @@ Live site - under development/hosted @godaddys -it allows you to sign in and out
 Property detail page screenshot:
 ![current property-detail.php screenshot](/images/ukrmove-screenshot.png?raw=true "current property-detail.php screenshot")
 
+Members page screenshot:
 ![members page screenshot](/images/screenshots/eric-cartman-inbox.png?raw=true "members page screenshot")
 
+Members page search section:
 ![members search screenshot](/images/screenshots/membersearch.jpg?raw=true "members search area screenshot")
 
