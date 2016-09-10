@@ -9,7 +9,7 @@ Live site - under development/hosted @godaddys -it allows you to sign in and out
 - All configurations: database name, phpMyAdmin, tables, usernames,passwords etc -> under admin folder (.gitignore)
 
 Home page Main Search section screenshot:
-![Home page Main Search section screenshot](/images/screenshots/main_search_area.png?raw=true "Home page Main Search section screenshot")
+![Home page Main Search section screenshot](/images/screenshots/homepage_top_search_area.png?raw=true "Home page Main Search section screenshot")
 
 Home page Main Carousel screenshot:
 ![Home page Main Carousel screenshot](/images/screenshots/ssliderhome.png?raw=true "Home page Main Carousel screenshot")
