@@ -273,6 +273,57 @@ button.btn.btn-success {
 	color: #fff;
 }
 
+
+.londonrentinguide {
+     padding: 25px 0 20px 0;
+     font-size: 16px;
+     height: 360px;
+     background: url(../images/londonestates.jpg);
+     background-position: right center;
+     opacity: .85;
+     border-bottom: 2px solid rgba(58, 75, 102, 0.35);
+     box-shadow: 2px -3px 4px 7px rgba(81, 94, 115, 0.25);
+     border-top: 1px solid rgba(7, 16, 18,.25);
+}
+
+.londonrentinguide h3 {
+     color: #fefefe;
+     text-shadow: 1px 2px 3px rgba(22, 22, 24, 0.7);
+     font-size: 32px;
+     letter-spacing: 1px;
+      line-height: 51px;
+}
+
+.londonrentinguide .guidetoptip h6 {
+    color: #8ff300;
+    text-shadow: 1px 2px 3px rgba(22, 22, 23, 0.75);
+    font-size: 21px;
+    letter-spacing: 1px;
+    line-height: 51px;
+    vertical-align: middle;
+    margin-bottom: 0;
+    text-decoration: underline;
+    text-align: center;
+    margin-right: 2em;
+}
+
+.londonguidewrap {
+     margin-bottom: 1em;
+     overflow: auto;
+}
+
+.guidemain {
+     overflow: auto;
+}
+
+.guidemain .guide p {
+     text-align: justify;
+    width: 300px;
+    padding-bottom: 2em;
+    color: #ececec;
+    margin: 0;
+}
+
 .greaterlondonhome {
           padding: .5em 1em;
          /* margin-bottom: 2em; */
