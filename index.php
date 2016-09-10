@@ -105,24 +105,30 @@ $str = explode(',',$Get_slider['img']);
                         <div class="guidemain">
                                 <div class="col-lg-4 col-sm-6 guide guide-one">
                                       <a href="#" title="guide-one">
-                                          <img src="#" alt="guide one" width="300" height="150">
+                                          <img src="images/rentready/rguideone.png" alt="guide one" width="300" height="150">
                                       </a>
                                       <p>Download our London renting guide to get all the best tips 
-                                            and advice for renting property in London from us</p>
+                                            and advice for renting property in London from us.&nbsp;
+                                            <a class="longuide" href="#">Read more</a>
+                                          </p>
                                 </div>  <!--  end of div guide-one -->
                                 <div class="col-lg-4 col-sm-6 guide guide-two">
                                       <a href="#" title="guide-one">
-                                          <img src="#" alt="guide one" width="300" height="150">
-                                      </a>
+                                          <img src="images/rentready/rguidethree.png" alt="guide one" width="300" height="150">
+                                      </a>     
                                       <p>Download our London renting guide to get all the best tips 
-                                            and advice for renting property in London from us</p>
+                                            and advice for renting property in London from us.&nbsp;
+                                            <a class="longuide" href="#">Read more</a>  
+                                          </p>
                                 </div><!--  end of div guide-two -->
                                 <div class="col-lg-4 col-sm-6 guide guide-three">
                                       <a href="#" title="guide-one">
-                                          <img src="#" alt="guide one" width="300" height="150">
+                                          <img src="images/rentready/rguidefour.png" alt="guide one" width="300" height="150">
                                       </a>
                                       <p>Download our London renting guide to get all the best tips 
-                                            and advice for renting property in London from us</p>
+                                            and advice for renting property in London from us.&nbsp;
+                                            <a class="longuide" href="#">Read more</a>  
+                                          </p>
                                 </div><!--  end of div guide-three -->
                         </div>  <!--  end of div guidemain -->        
               </div>   <!--  end of div row-->
