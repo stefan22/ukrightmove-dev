@@ -165,11 +165,11 @@ button.btn.btn-success {
 }
 .navbar-inverse .navbar-nav > li > a {
 	font-size: 14px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	font-family: din;
-	text-transform: uppercase;
-               line-height: 33px;
+               padding-top: 13px;
+               padding-bottom: 13px;
+               font-family: din;
+               text-transform: uppercase;
+               line-height: 36px;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 	background-color: #72b70f;
@@ -288,17 +288,21 @@ button.btn.btn-success {
 
 .greaterlondonhome h1 {
           color: #fff;
-          font-size: 43px;
+          font-size: 44px;
           text-shadow: 0 1px 1px #000;
           line-height: 58px;
+          color: #fff;
+          text-shadow: -1px 1px 3px #07101b;
+          letter-spacing: 1px;
+    
 
 }
 
 .greaterlondonhome h3 {
-          color: #fff;
-          text-shadow: 0 1px 1px #000;
-          letter-spacing: 0;
-          padding-bottom: 10px;
+               color: #fff;
+               text-shadow: -1px 2px 5px #07101b;
+               letter-spacing: 1px;
+               padding-bottom: 10px;
 }
 
 .greaterlondon {
@@ -394,15 +398,18 @@ form#memberform {
 div.torent {
      color: #fff;
      font-size: 16px;
-     text-shadow: 0 1px 1px #000;
-     line-height: 20px;
+     text-shadow: 1px 1px 3px #000;
+     line-height: 22px;
+     font-variant: 1px;
+     letter-spacing: 1px;
 }
 
 div.forsale {
      color: #fff;
      font-size: 16px;
-     text-shadow: 0 1px 1px #000;
-     line-height: 20px;
+     text-shadow: 1px 1px 3px #000;
+     font-variant: 1px;
+     letter-spacing: 1px;
 }
 
 .allmemoptions {
@@ -434,6 +441,12 @@ div.forsale {
     text-shadow: 0px 1px 1px rgba(0,0,0,.55);
 
 }
+/*
+.hidden {
+     display: inline-block !important;
+     visibility: visible !important;
+}
+*/
 
 #headerform a.btn.active.btn-danger, #headerform a.btn.active.btn-danger:focus, #headerform a.btn.active.btn-danger:active {
      background-color: #a7a7d1;
@@ -448,12 +461,16 @@ div.forsale {
 
 .torent div {
      margin-top: .3em;
-     margin-left: .15em;
+    
 }
 
 .forsale div {
      margin-top: .3em;
-     margin-left: .15em;
+     
+}
+
+#headerform div a.btn.btn-default {
+     padding: 2px 3px;
 }
 
 .memberoption select {
@@ -1072,22 +1089,21 @@ span.helpback {
 
 li.home {
 	position: absolute;
-               top: 8.5px;
+               top: 11px;
                left: 14px;
 }
 
 .navbar-inverse .navbar-nav > li.home > a {
 	display: inline;
 	color: #ffffff;
-	font-size: 20px;
+	font-size: 23px;
 	text-transform: none;
 }
 
 span.desc {
-	color: #898989;
-               line-height: 42px;
-               font-size: 13px;
-               padding-right: 1em;
+      	color: #bbbbbb;
+               line-height: 41px;
+               vertical-align: top;
 }
 
 /* removes home main nav tab description when screen size under 1100px;*/
@@ -1282,8 +1298,6 @@ ul#usernav {
           vertical-align: middle;
           width: 120px;
 }
-
-
 
 
 
