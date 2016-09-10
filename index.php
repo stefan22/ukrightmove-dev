@@ -88,121 +88,46 @@ $str = explode(',',$Get_slider['img']);
 </div>    <!--  end of div showcase -->
 
 
-<div class="banner-search">
-  <div class="container"> 
-    <!-- banner -->
-    <h3>Buy, Sale & Rent</h3>
-    <div class="searchbar">
-      <div class="row">
-
-        <?php
-            $homepage = "index.php";
-            $currentpageurl = $_SERVER['REQUEST_URI'];
-            //echo $currentpageurl;
-            $currentpage = substr($currentpageurl, strrpos($currentpageurl, '/') +1);
-            //echo $currentpage;
-
-
-            if (($_SESSION['AGENT'] !== '') && ($homepage == $currentpage))
-            {
-            ?>
-                  <div class="col-lg-12 col-sm-6">
-                      <form action="buysalerent.php" method="post" >
-                        <input name="key" type="text" class="form-control" placeholder="Search of Properties">
-                        <div class="row">
-                          <div class="col-lg-3 col-sm-3 ">
-                            <select class="form-control" name="for">
-                              <option value="">For</option>
-                              <option value="Buy">Buy</option>
-                              <option value="Rent">Rent</option>
-                              <option value="Sale">Sale</option>
-                            </select>
-                          </div>
-                          <div class="col-lg-3 col-sm-4">
-                            <select class="form-control" name="price">
-                              <option value="">Price</option>
-                              <option value="150000 AND 200000"><?php echo currency; ?>150,000 - <?php echo currency; ?>200,000</option>
-                              <option value="200000 AND 250000"><?php echo currency; ?>200,000 - <?php echo currency; ?>250,000</option>
-                              <option value="250000 AND 300000"><?php echo currency; ?>250,000 - <?php echo currency; ?>300,000</option>
-                              <option value="300000"><?php echo currency; ?>300,000 - above</option>
-                            </select>
-                          </div>
-                          <div class="col-lg-3 col-sm-4">
-                            <select class="form-control" name="type">
-                              <option value="">Property Type</option>
-                              <option value="Apartment">Apartment</option>
-                              <option value="Building">Building</option>
-                              <option value="Office Space">Office Space</option>
-                            </select>
-                          </div>
-                          <input type="hidden" name="search" value="search">
-                          <div class="col-lg-3 col-sm-4">
-                            <button class="btn btn-success"  onclick="window.location.href='buysalerent.php'">Find Now</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div> <!--  end of div col-lg-6 -->
-            <?php
-            } else 
-            {
-            ?>
-                  <div class="col-lg-6 col-sm-6">
-                        <form action="buysalerent.php" method="post" >
-                              <input name="key" type="text" class="form-control" placeholder="Search of Properties">
-                              <div class="row">
-                                <div class="col-lg-3 col-sm-3 ">
-                                  <select class="form-control" name="for">
-                                    <option value="">For</option>
-                                    <option value="Buy">Buy</option>
-                                    <option value="Rent">Rent</option>
-                                    <option value="Sale">Sale</option>
-                                  </select>
-                                </div>
-                                <div class="col-lg-3 col-sm-4">
-                                  <select class="form-control" name="price">
-                                    <option value="">Price</option>
-                                    <option value="150000 AND 200000"><?php echo currency; ?>150,000 - <?php echo currency; ?>200,000</option>
-                                    <option value="200000 AND 250000"><?php echo currency; ?>200,000 - <?php echo currency; ?>250,000</option>
-                                    <option value="250000 AND 300000"><?php echo currency; ?>250,000 - <?php echo currency; ?>300,000</option>
-                                    <option value="300000"><?php echo currency; ?>300,000 - above</option>
-                                  </select>
-                                </div>
-                                <div class="col-lg-3 col-sm-4">
-                                  <select class="form-control" name="type">
-                                    <option value="">Property Type</option>
-                                    <option value="Apartment">Apartment</option>
-                                    <option value="Building">Building</option>
-                                    <option value="Office Space">Office Space</option>
-                                  </select>
-                                </div>
-                                <input type="hidden" name="search" value="search">
-                                <div class="col-lg-3 col-sm-4">
-                                  <button class="btn btn-success"  onclick="window.location.href='buysalerent.php'">Find Now</button>
-                                </div>
-                              </div>
-                        </form>
-                  </div> <!--  end of div col-lg-6 --> 
-            <?php
-            }
-            ?>                
-
-          
-
-        <div class="col-lg-5 col-lg-offset-1 col-sm-6 ">
-          <?php
-		if(($_SESSION['AGENT'] == ''))
-		{
-		?>
-          <p>Join now and be the first to see new properties.</p>
-          <button class="btn btn-info"   data-toggle="modal" data-target="#loginpop">Login</button>
-          <?php
-		}
-      ?>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>    <!--  end of div comment -->
+<div class="londonrentinguide clearfix">
+      <div class="container"> 
+              <div class="row"> 
+                        <div class="londonguidewrap">
+                            <div class="col-lg-8 col-sm-8 guideheadline">
+                                    <h3>London Renting Guide</h3>
+                            </div>  <!--  end of div guideheadline-->
+                            <div class="col-lg-4 col-sm-4 guidetoptip">
+                                    <h6>with great renting tips</h6
+                            </div>  <!--  end of div guidetoptip-->
+                        </div> <!--  end of div londonguidewrap -->
+              </div>
+              
+              <div class="row">
+                        <div class="guidemain">
+                                <div class="col-lg-4 col-sm-6 guide guide-one">
+                                      <a href="#" title="guide-one">
+                                          <img src="#" alt="guide one" width="300" height="150">
+                                      </a>
+                                      <p>Download our London renting guide to get all the best tips 
+                                            and advice for renting property in London from us</p>
+                                </div>  <!--  end of div guide-one -->
+                                <div class="col-lg-4 col-sm-6 guide guide-two">
+                                      <a href="#" title="guide-one">
+                                          <img src="#" alt="guide one" width="300" height="150">
+                                      </a>
+                                      <p>Download our London renting guide to get all the best tips 
+                                            and advice for renting property in London from us</p>
+                                </div><!--  end of div guide-two -->
+                                <div class="col-lg-4 col-sm-6 guide guide-three">
+                                      <a href="#" title="guide-one">
+                                          <img src="#" alt="guide one" width="300" height="150">
+                                      </a>
+                                      <p>Download our London renting guide to get all the best tips 
+                                            and advice for renting property in London from us</p>
+                                </div><!--  end of div guide-three -->
+                        </div>  <!--  end of div guidemain -->        
+              </div>   <!--  end of div row-->
+      </div>   <!--  end of div container -->
+</div>    <!--  end of div londonrentinguide -->
 
 
 
