@@ -14,9 +14,6 @@ Home page Main Search section screenshot:
 Home page Main Carousel screenshot:
 ![Home page Main Carousel screenshot](/images/screenshots/ssliderhome.png?raw=true "Home page Main Carousel screenshot")
 
-Home page top section screenshot:
-![current home-page topsection screenshot](/images/screenshots/homepage-screenshot.png?raw=true "current home-page topsec screenshot")
-
 Property detail page screenshot:
 ![current property-detail.php screenshot](/images/ukrmove-screenshot.png?raw=true "current property-detail.php screenshot")
 
