@@ -137,7 +137,8 @@ if(strpos( $_SERVER['REQUEST_URI'] , 'register.php' ))
 <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
 <script src="assets/bootstrap/js/bootstrap.js"></script>
 
-<script src="js/bootstrap-checkbox.min.js" defer></script>
+<script src="js/bootstrap-checkbox.min.js"></script>
+
 <script src="assets/script.js"></script>
 
 <script type="text/javascript">
@@ -171,12 +172,12 @@ $(document).ready(function(){
        
     </style>
     <script type="text/javascript" language="javascript">
-    function createlightbox()
+    function createlightbox();
     {
         document.getElementById('light').style.display='block';
         document.getElementById('fade').style.display='block'
     }
-    function closelightbox()
+    function closelightbox();
     {
         document.getElementById('light').style.display='none';
         document.getElementById('fade').style.display='none'
@@ -186,34 +187,55 @@ $(document).ready(function(){
 <script type="text/javascript"> 
 // ready function for checkbox
 $(document).ready(function() {
-    //grab values for true or false
-    var forsale = $('input#forsale').is('checked');
-    var torent = $('input#torent').is('checked');
-    console.log('for sale is: ' + forsale);
-    console.log('to rent is: ' + torent);
 
-   
-
-
-  // enable bootstrap-checkbox via js
-  //set default to rent true and sale false
+  //set default torent=true and forsale=false
   $('input#torent').prop('checked', true);
   $('input#forsale').prop('checked', false);
+        
+  // enabled checkboxpicker
+  $(':checkbox').checkboxpicker();
+  // gets array of two hidden checkboxes
+  var checkboxes = $('input.checkbox.hidden');
+  // in order to apply prop i need to use a variable
+            var checkone = checkboxes[0];
+            var checktwo = checkboxes[1];
+  //console.log(checkboxes);
+  // gets array of 4 a links: 
+  // a.btn.btn-default,  a.btn.active.btn-success,
+  // a.btn.active.btn-danger,  a.btn.btn-default
+  var alinks = checkboxes.parent().children().find('a');
+  //console.log(alinks);
+   
+       var yesrent = function(e) {
+            $('.torent a.btn.active.btn-success').on('click', function(e) {
+                  // maybe there's a better way but this works nice for me
+                  // only one checkbox-yes on at a time, no double clicking etc
+                  console.log('checked yes rent');   
+                  $('.torent a.btn.active.btn-success');
+                  $(checktwo).prop('checked', false);
+                  $(alinks[3]).removeClass().addClass('btn btn-default');
+                  $(alinks[2]).removeClass().addClass('btn active btn-danger');
+                            
+            }); 
+      }();    // yes rent checkbox
+                            
+     
+      var yesale = function(e) {
+            $('.forsale a.btn.btn-default').on('click', function(e) {
+                  console.log('checked yes sale' );
+                  $('.forsale a.btn.btn-default');
+                  $(checkone).prop('checked', false);
+                  $(alinks[1]).removeClass().addClass('btn btn-default');
+                  $(alinks[0]).removeClass().addClass('btn active btn-danger');
+                                   
+            });
+      }();    // yes for sale checkbox
 
-  $(':checkbox').checkboxpicker().change(function() {
 
-
-
-  });     //checkbox
-
-  
-
-
-
-
-
-});     //ready function for checkbox
+ 
+});     //ready function for checkbox - 
 </script>
+
 
 
 
@@ -376,13 +398,13 @@ else   {
                                                                             <!-- bootstrap-checkbox buttons -->
                                                                              <div class="col-lg-2 col-sm-2">
                                                                                       <div class="torent">To Rent:
-                                                                                                 <input type="checkbox" id="torent" data-group-cls="btn-group-justified">
+                                                                                                 <input type="checkbox" id="torent" class="checkbox" data-group-cls="btn-group-justified" checked='true' >
                                                                                       </div>  <!--  end of div form-group -->
                                                                             </div>  <!--  end of div col-lg2 -->
                   
                                                                              <div class="col-lg-2 col-lg-offset-1 col-sm-2 col-lg-offset-1">
                                                                                       <div class="forsale">For Sale:
-                                                                                                 <input type="checkbox" id="forsale" data-group-cls="btn-group-justified">
+                                                                                                 <input type="checkbox" id="forsale" class="checkbox" data-group-cls="btn-group-justified" checked='false'>
                                                                                       </div>  <!--  end of div form-group -->
                                                                             </div>  <!--  end of div col-lg2 -->
                                                                          

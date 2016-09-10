@@ -33,15 +33,27 @@ $str = explode(',',$Get_slider['img']);
                 <?php	
         			}
         			?>
-                <div class="sl-slide-inner">
-                  <div class="bg-img" style="background-image:url(images/properties/<?php echo $slider['pimage']; ?>);" ></div>
-                  <h2><a href="property-detail.php?pid=<?php echo $slider['pid'];  ?>"><?php echo $slider['ptitle'];  ?></a></h2>
-                  <blockquote>
-                    <p class="location"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $slider['paddress'];  ?></p>
-                    <p><?php echo substr ($slider['pdetail'],0,200);  ?></p>
-                    <cite><?php echo currency.' '.$slider['pprice'];  ?></cite> </blockquote>
-                </div>
-              </div>
+                  <div class="sl-slide-inner">
+                      <div class="bg-img" style="background-image:url(images/properties/<?php echo $slider['pimage']; ?>);" ></div>
+                      <h2><a href="property-detail.php?pid=<?php echo $slider['pid'];  ?>"><?php echo $slider['ptitle'];  ?></a></h2>
+                      <blockquote>
+                              <p class="location">
+                                  <span class="glyphicon glyphicon-map-marker"></span> 
+                                  <?php echo $slider['paddress'];  ?>
+                              </p>
+                              <div class="slide-desc">
+                                    <p><?php echo substr ($slider['pdetail'],0,200);  ?></p>
+                              </div> 
+                              <div class="slicertop">
+                                    <div class="slicerbutton">
+                                          <button class="btn btn-success membersearchbutton">
+                                                <p><?php echo currency.' '.$slider['pprice'];  ?></p>
+                                          </button>
+                                   </div>   <!--  end of div slicerbutton -->
+                              </div>  <!--  end of div slicer top -->     
+                      </blockquote>
+                  </div>
+              </div>  <!--  end of div sl-slide-inner -->
               <?php
         			 $i++;
         		}
