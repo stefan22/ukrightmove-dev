@@ -14,8 +14,9 @@ Home page Main Search section screenshot:
 Home page Main Carousel screenshot:
 ![Home page Main Carousel screenshot](/images/screenshots/ssliderhome.png?raw=true "Home page Main Carousel screenshot")
 
-Home page -in-progress- Renting Guide screenshot: will link to a static page providing useful industry resources/tips etc
+Home page -in-progress- Renting Guide screenshot: 
 ![Home page -in-progress- Renting Guide screenshot](/images/screenshots/rentinguide_homepage.png?raw=true "Home page -in-progress- Renting Guide screenshot")
+-from home page to link to 3 static pages that will provide useful industry resources/tips etc
 
 
 Property detail page screenshot:
