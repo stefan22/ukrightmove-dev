@@ -22,7 +22,7 @@ Home page -in-progress- Renting Guide screenshot:
 > from home page to link to 3 static pages that will provide useful industry resources/tips etc
 
 
-<br /><br />
+<br />
 
 
 Property detail page screenshot:
