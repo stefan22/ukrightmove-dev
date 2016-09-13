@@ -14,6 +14,12 @@ Home page Main Search section screenshot:
 Home page Main Carousel screenshot:
 ![Home page Main Carousel screenshot](/images/screenshots/ssliderhome.png?raw=true "Home page Main Carousel screenshot")
 
+rentinguide_homepage.png
+
+Home page -in-progress- Renting Guide screenshot:
+![Home page -in-progress- Renting Guide screenshot](/images/screenshots/rentinguide_homepage.png?raw=true "HHome page -in-progress- Renting Guide screenshot")
+
+
 Property detail page screenshot:
 ![current property-detail.php screenshot](/images/ukrmove-screenshot.png?raw=true "current property-detail.php screenshot")
 
