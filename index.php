@@ -99,8 +99,8 @@ $str = explode(',',$Get_slider['img']);
                                     <h6>with great renting tips</h6
                             </div>  <!--  end of div guidetoptip-->
                         </div> <!--  end of div londonguidewrap -->
+              </div>  <!--  end of div row -->
               </div>
-              
               <div class="row">
                         <div class="guidemain">
                                 <div class="col-lg-4 col-sm-6 guide guide-one">
@@ -130,107 +130,116 @@ $str = explode(',',$Get_slider['img']);
                                             <a class="longuide" href="#">Read more</a>  
                                           </p>
                                 </div><!--  end of div guide-three -->
-                        </div>  <!--  end of div guidemain -->        
+                        </div>  <!--  end of div guidemain -->   
+
               </div>   <!--  end of div row-->
+
       </div>   <!--  end of div container -->
 </div>    <!--  end of div londonrentinguide -->
 
+                
+<div class="featuredprophp">
+      <div class="container">
+            <div class="properties-listing spacer"> 
+                      <a href="buysalerent.php?task=all" class="pull-right viewall">View All Listing</a>
 
-
-<div class="container">
-<div class="properties-listing spacer"> <a href="buysalerent.php?task=all" class="pull-right viewall">View All Listing</a>
-
-
-  <h2>Featured Properties</h2>
-  <div id="owl-example" class="owl-carousel">
-    <?php $sel = get_property();
-	 while($data = mysql_fetch_assoc($sel))
-	{
-	?>
-    <div class="properties">
-      <div class="image-holder"><img src="images/properties/<?php echo $data['pimage']; ?>" class="img-responsive" alt="properties"/>
-        <div class="status sold"><?php echo $data['pfor']; ?></div>
-      </div>
-      <h4><a href="property-detail.php?pid=<?php echo $data['pid']; ?>"><?php echo stripslashes($data['ptitle']); ?></a></h4>
-      <p class="price"><?php echo currency; ?><?php echo $data['pprice']; ?></a></p>
-      <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room"><?php echo $data['bedroom']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room"><?php echo $data['livingroom']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking"><?php echo $data['parking']; ?></span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen"><?php echo $data['kitchen']; ?></span> </div>
-      <a class="btn btn-primary" href="property-detail.php?pid=<?php echo $data['pid']; ?>">View Details</a> </div>
-    <?php
-    
-	}
-	 
-  ?>
-  </div>
-</div>
-<div class="spacer">
-  <div class="row">
-    
-    
-    <div class="col-lg-6 col-sm-9 recent-view" style="border:1px solid #666666;height:150px;border-radius:5px;">
-      <!-- <h3>About Us</h3> -->
-      		
-      	<h3>tba</h3>
-      		
+                        <h2>Featured Properties</h2>
+                        <div id="owl-example" class="owl-carousel">
+                        <?php $sel = get_property();
+	                  while($data = mysql_fetch_assoc($sel))
+	                   {https://github.com/stefan22?tab=repositories
+	                   ?>
+                        <div class="properties">
+                        <div class="image-holder">
+                                <img src="images/properties/<?php echo $data['pimage']; ?>" class="img-responsive" alt="properties"/>
+                                <div class="status sold"><?php echo $data['pfor']; ?></div>
+                        </div> <!--  end of div image-holder -->
       
-        
-        
-        
-    </div> <!-- end of recent view -->
-    
-    
-    
-    <div class="col-lg-5 col-lg-offset-1 col-sm-3 recommended">
-      <h3>Recent Properties</h3>
-      <div id="myCarousel" class="carousel slide">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-          <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-        </ol>
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <?php
-          $recent = get_recent_property();
-		  $i = 0;
-		  while($recent_property = mysql_fetch_assoc($recent))
-		  {
-         ?>
-          <?php
-		  if($i == 0)
-		  {
-		  	?>
-          <div class="item active">
-            <?php
-		  }
-          else
-		  {
-			?>
+                        <h4><a href="property-detail.php?pid=<?php echo $data['pid']; ?>">
+                                <?php echo stripslashes($data['ptitle']); ?></a>
+                       </h4>
+      
+                        <p class="price"><?php echo currency; ?><?php echo $data['pprice']; ?></a></p>
+                        
+                        <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">
+                                <?php echo $data['bedroom']; ?></span> 
+                                <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">
+                                <?php echo $data['livingroom']; ?></span> <span data-toggle="tooltip" data-placement="bottom" 
+                                data-original-title="Parking"><?php echo $data['parking']; ?></span> <span data-toggle="tooltip" 
+                                data-placement="bottom" data-original-title="Kitchen"><?php echo $data['kitchen']; ?></span> 
+                        </div>  <!--  end of div listing-detail -->
+                        
+                        <a class="btn btn-primary" href="property-detail.php?pid=<?php echo $data['pid']; ?>">View Details</a>
             
-            <div class="item">
-              <?php
-		  }
-			?>
-              <div class="row">
-                <div class="col-lg-4"><img src="images/properties/<?php echo $recent_property['pimage']; ?>" class="img-responsive" alt="properties"/>
-                </div>
-                <div class="col-lg-8">
-                  <h5><a href="property-detail.php?pid=<?php echo $recent_property['pid']; ?>"><?php echo $recent_property['ptitle']; ?></a></h5>
-                  <p class="price"><?php echo currency; ?><?php echo $recent_property['pprice']; ?></p>
-                  <a href="property-detail.php?pid=<?php echo $recent_property['pid']; ?>" class="more">More Detail</a> 
-                </div>
-              </div><!--  end of row -->
-            </div><!-- end of item -->
-            
+            </div>   <!--  end of div properties-listing spacer -->
+          
             <?php
-		  $i++;
-		  }
-		  ?>
-          </div> <!-- end of item active --->
-        </div><!-- end of inner carousel --->
-      </div> <!-- end of carousel --->
-    </div> <!- end of recommended -->
-    <br/><br/>
-  </div>
-</div>
-<?php include'footer.php';?>
+    
+	       }
+	 
+            ?>
+      </div>   <!--  end of div  container-->
+</div>    <!--  end of div featuredprophp -->
+
+
+<div class="spacer">
+        <div class="row">
+                <div class="col-lg-6 col-sm-9 recent-view" style="border:1px solid #666666;height:150px;border-radius:5px;">
+      	           <h3>tba</h3>
+                </div> <!-- end of recent view -->
+    
+                <div class="col-lg-5 col-lg-offset-1 col-sm-3 recommended">
+                        <h3>Recent Properties</h3>
+                        <div id="myCarousel" class="carousel slide">
+                          <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                            <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                            <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                          </ol>
+                          <!-- Carousel items -->
+                          <div class="carousel-inner">
+                            <?php
+                            $recent = get_recent_property();
+                  		  $i = 0;
+                  		  while($recent_property = mysql_fetch_assoc($recent))
+                  		  {
+                           ?>
+                            <?php
+                  		  if($i == 0)
+                  		  {
+                  		  	?>
+                            <div class="item active">
+                              <?php
+                  		  }
+                            else
+                  		  {
+                  			?>
+                              
+                              <div class="item">
+                                <?php
+                  		  }
+                  			?>
+                                <div class="row">
+                                  <div class="col-lg-4"><img src="images/properties/<?php echo $recent_property['pimage']; ?>" class="img-responsive" alt="properties"/>
+                                  </div>
+                                  <div class="col-lg-8">
+                                    <h5><a href="property-detail.php?pid=<?php echo $recent_property['pid']; ?>"><?php echo $recent_property['ptitle']; ?></a></h5>
+                                    <p class="price"><?php echo currency; ?><?php echo $recent_property['pprice']; ?></p>
+                                    <a href="property-detail.php?pid=<?php echo $recent_property['pid']; ?>" class="more">More Detail</a> 
+                                  </div>
+                                </div><!--  end of row -->
+                              </div><!-- end of item -->
+                              
+                              <?php
+                  		  $i++;
+                  		  }
+                  		  ?>
+                            </div> <!-- end of item active --->
+                          </div><!-- end of inner carousel --->
+                        </div> <!-- end of carousel --->
+                      </div> <!- end of recommended -->
+                      <br/><br/>
+                    </div>
+                  </div>
+                  <?php include'footer.php';?>
